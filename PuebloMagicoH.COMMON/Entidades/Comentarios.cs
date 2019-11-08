@@ -20,4 +20,4 @@ namespace PuebloMagicoH.COMMON.Entidades
         public int IDUsuarioValidador { get; set; }
     }
 }
-}
+

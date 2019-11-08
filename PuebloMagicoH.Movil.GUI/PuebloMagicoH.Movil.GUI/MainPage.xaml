@@ -5,14 +5,40 @@
              x:Class="PuebloMagicoH.Movil.GUI.MainPage"
              Title=" app hucihapan" >
 
-    <StackLayout>
-        <!-- Place new controls here -->
+    <!--<StackLayout>
+        --><!-- Place new controls here --><!--
         <Label Text="Welcome to Xamarin.Forms" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
         <Label>sads</Label>
         <Button Text="abrir qui"></Button>
-    </StackLayout>
+    </StackLayout>-->
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <BoxView BackgroundColor="Yellow" Grid.Row="0"/>
+
+            <BoxView BackgroundColor="Blue" Grid.Row="1"
+                     HeightRequest="100"/>
+            
+            <BoxView BackgroundColor="Red" Grid.Row="2"/>
+            
+            <BoxView BackgroundColor="Green" Grid.Row="3"/>
+
+            <BoxView BackgroundColor="SkyBlue" Grid.Row="4"/>
+
+            <BoxView BackgroundColor="Azure" Grid.Row="0"
+                     VerticalOptions="End" HorizontalOptions="Center"
+                     HeightRequest="100" WidthRequest="100" TranslationY="50"/>
+
+        </Grid>
+    </ScrollView>
     
 
 </ContentPage>
