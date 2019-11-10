@@ -4,12 +4,9 @@ using System.Text;
 
 namespace PuebloMagicoH.COMMON.Entidades
 {
-    public class TipoDeUsuario
+    public class TipoDeUsuario:BaseDTO
     {
-        public int IDTipoUsuario { get; set; }
+        public int IDTipoUsuario { get; set; }//REvisar si se admite
         public int Nombre { get; set; }
-        public int Descripcion { get; set; }
-        public DateTime FechaYHora { get; set; }
-        public int Notas { get; set; }
     }
 }

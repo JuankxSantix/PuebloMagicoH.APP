@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PuebloMagicoH.Movil.GUI.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ButtonPrimaryColor">#4CAF50</Color>
+        </ResourceDictionary>
 
     </Application.Resources>
 </Application>
