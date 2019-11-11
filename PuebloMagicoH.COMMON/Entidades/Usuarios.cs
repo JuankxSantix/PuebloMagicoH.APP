@@ -4,20 +4,20 @@ using System.Text;
 
 namespace PuebloMagicoH.COMMON.Entidades
 {
-    public class Usuarios
+    public class Usuarios:BaseDTO
     {
-        public int NombreDeUsuario { get; set; }
-        public int Correo { get; set; }
-        public int Contrasenia { get; set; }
+        public string NombreDeUsuario { get; set; }
+        public string Correo { get; set; }
+        public string Contrasenia { get; set; }
         public DateTime FechaDeNacimiento { get; set; }
-        public int Genero { get; set; }
-        public int Ocupacion { get; set; }
+        public string Genero { get; set; }
+        public string Ocupacion { get; set; }
         public bool SoyDeHuichapan { get; set; }
-        public int Estado { get; set; }
-        public int Ciudad { get; set; }
-        public int MotivoDeVisita { get; set; }
-        public int EnteradoPor { get; set; }
-        public int InformacionARecivir { get; set; }
-        public int TipoDeUsuario { get; set; }
+        public string Estado { get; set; }
+        public string Ciudad { get; set; }
+        public string MotivoDeVisita { get; set; }
+        public string EnteradoPor { get; set; }
+        public string InformacionARecivir { get; set; }
+        public string TipoDeUsuario { get; set; }
     }
 }

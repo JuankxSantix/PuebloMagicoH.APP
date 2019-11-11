@@ -9,15 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuebloMagicoH.Movil.GUI.iOS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuebloMagicoH.Movil.GUI", "PuebloMagicoH.Movil.GUI\PuebloMagicoH.Movil.GUI\PuebloMagicoH.Movil.GUI.csproj", "{9A986E26-CF18-41AB-A9C5-7B809368EE38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuebloMagicoH.COMMON", "PuebloMagicoH.COMMON\PuebloMagicoH.COMMON.csproj", "{37ED2700-330E-40BA-8056-4F0FD3865F42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuebloMagicoH.COMMON", "PuebloMagicoH.COMMON\PuebloMagicoH.COMMON.csproj", "{37ED2700-330E-40BA-8056-4F0FD3865F42}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapasBase", "CapasBase", "{8F021EF3-BC61-4161-8124-69841AC6FCDC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppMovil", "AppMovil", "{01329BA2-4F8A-41CE-9C7B-02866E1E4A68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuebloMagicoH.DAL", "PuebloMagicoH.DAL\PuebloMagicoH.DAL.csproj", "{32E488ED-115D-4B1F-9964-3AC5F52D4BA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuebloMagicoH.DAL", "PuebloMagicoH.DAL\PuebloMagicoH.DAL.csproj", "{32E488ED-115D-4B1F-9964-3AC5F52D4BA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuebloMagicoH.BIZ", "PuebloMagicoH.BIZ\PuebloMagicoH.BIZ.csproj", "{D9EB5458-3974-4943-83E8-9C1A0267233C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuebloMagicoH.BIZ", "PuebloMagicoH.BIZ\PuebloMagicoH.BIZ.csproj", "{D9EB5458-3974-4943-83E8-9C1A0267233C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

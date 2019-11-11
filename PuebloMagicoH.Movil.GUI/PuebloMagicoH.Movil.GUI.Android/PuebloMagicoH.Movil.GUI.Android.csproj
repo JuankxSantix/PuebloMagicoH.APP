@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MongoDB.Driver">
-      <Version>2.9.2</Version>
+      <Version>2.9.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Forms">
@@ -90,13 +90,72 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
-    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\PuebloMagicoH.BIZ\PuebloMagicoH.BIZ.csproj">
+      <Project>{d9eb5458-3974-4943-83e8-9c1a0267233c}</Project>
+      <Name>PuebloMagicoH.BIZ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PuebloMagicoH.COMMON\PuebloMagicoH.COMMON.csproj">
+      <Project>{37ed2700-330e-40ba-8056-4f0fd3865f42}</Project>
+      <Name>PuebloMagicoH.COMMON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PuebloMagicoH.DAL\PuebloMagicoH.DAL.csproj">
+      <Project>{32e488ed-115d-4b1f-9964-3ac5f52d4ba2}</Project>
+      <Name>PuebloMagicoH.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PuebloMagicoH.Movil.GUI\PuebloMagicoH.Movil.GUI.csproj">
       <Project>{D571AF46-12CD-4629-8D57-842C465E3218}</Project>
       <Name>PuebloMagicoH.Movil.GUI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\aiga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\azzz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\directorio.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\emergencia.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\fhgdfj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\gf.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\hgb.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\LogoHuichapan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mejorar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Monumento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ofert.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\seguridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\service.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

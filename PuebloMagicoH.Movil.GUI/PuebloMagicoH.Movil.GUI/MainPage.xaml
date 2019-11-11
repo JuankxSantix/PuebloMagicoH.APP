@@ -2,43 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:PuebloMagicoH.Movil.GUI"
-             x:Class="PuebloMagicoH.Movil.GUI.MainPage"
-             Title=" app hucihapan" >
+             xmlns:models="clr-namespace:PuebloMagicoH.COMMON.Modelos;assembly=PuebloMagicoH.COMMON"
+             
+             x:Class="PuebloMagicoH.Movil.GUI.MainPage" Title="Inicio de seción">
 
-    <!--<StackLayout>
-        --><!-- Place new controls here --><!--
-        <Label Text="Welcome to Xamarin.Forms" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-        <Label>sads</Label>
-        <Button Text="abrir qui"></Button>
-    </StackLayout>-->
-    <ScrollView>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
-            <BoxView BackgroundColor="Yellow" Grid.Row="0"/>
+    <ContentPage.BindingContext>
+        <models:LoginModel/>
+    </ContentPage.BindingContext>
 
-            <BoxView BackgroundColor="Blue" Grid.Row="1"
-                     HeightRequest="100"/>
-            
-            <BoxView BackgroundColor="Red" Grid.Row="2"/>
-            
-            <BoxView BackgroundColor="Green" Grid.Row="3"/>
+    <Grid>
 
-            <BoxView BackgroundColor="SkyBlue" Grid.Row="4"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
-            <BoxView BackgroundColor="Azure" Grid.Row="0"
-                     VerticalOptions="End" HorizontalOptions="Center"
-                     HeightRequest="100" WidthRequest="100" TranslationY="50"/>
+        <Image Grid.Row="0" Source="LogoHuichapan.PNG"/>
+        <Label HorizontalOptions="Center" Grid.Row="1" Style="{StaticResource TextNormal}" Text="E-mail"/>
+        <Entry Grid.Row="2" Placeholder="Usuario@gmail.com" Text="{Binding Email}"/>
 
-        </Grid>
-    </ScrollView>
+        <Label HorizontalOptions="Center" Grid.Row="3" Style="{StaticResource TextNormal}" Text="Cintraseña"/>
+        <Entry Grid.Row="4" Placeholder="**********" IsPassword="True" Text="{Binding Password}"/>
+
+        <Label HorizontalOptions="Center" Grid.Row="3" Style="{StaticResource TextNormal}" Text="Idioma"/>
+
+
+        <StackLayout Orientation="Horizontal" Grid.Row="5">
+            <Label HorizontalOptions="FillAndExpand" Style="{StaticResource TextNormal}" Text="Recordar mis datos e iniciar automáticamente"/>
+
+        </StackLayout>
+
+        <Button Style="{StaticResource butttonNormal}" Text="Iniciar Sesión" x:Name="btnIniciarSesion" Clicked="BtnIniciarSesion_Clicked"/>
+        <Button Style="{StaticResource butttonSecundario}" Text="Crear cuanta" x:Name="btnCrearCuenta" Clicked="BtnCrearCuenta_Clicked"/>
+
+    </Grid>
     
-
 </ContentPage>

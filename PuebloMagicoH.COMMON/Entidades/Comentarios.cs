@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PuebloMagicoH.COMMON.Entidades
 {
-    public class Comentarios
+    public class Comentarios:BaseDTO
     {
         public int Calificacion { get; set; }
         public int QuejaVisible { get; set; }

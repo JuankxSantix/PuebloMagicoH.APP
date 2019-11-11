@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PuebloMagicoH.COMMON.Entidades
 {
-    public class Eventos
+    public class Eventos:BaseDTO
     {
         public string LugarEvento { get; set; }
         public string NombreEvento { get; set; }

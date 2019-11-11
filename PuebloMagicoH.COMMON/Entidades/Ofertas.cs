@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PuebloMagicoH.COMMON.Entidades
 {
-    public class Ofertas
+    public class Ofertas:BaseDTO
     {
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFinal { get; set; }

@@ -17,7 +17,9 @@ namespace PuebloMagicoH.COMMON
         public string Error { get; private set; }
         public Repositorio()
         {
-            client = new MongoClient("mongodb + srv : // huichapanuser : ControlPuebloMagico @ bdpueblomagicoh-xg6rg.gcp.mongodb.net / test ? retryWrites = true & w = mayoría");
+            //ControlPuebloMagico
+
+            client = new MongoClient(@"mongodb://huichapanuser:ControlPuebloMagico@bdpueblomagicoh-shard-00-00-xg6rg.gcp.mongodb.net:27017,bdpueblomagicoh-shard-00-01-xg6rg.gcp.mongodb.net:27017,bdpueblomagicoh-shard-00-02-xg6rg.gcp.mongodb.net:27017/test?ssl=true&replicaSet=BDPuebloMagicoH-shard-0&authSource=admin&retryWrites=true&w=majority");
             db = client.GetDatabase("BDPuebloMagicoH");
 
         }

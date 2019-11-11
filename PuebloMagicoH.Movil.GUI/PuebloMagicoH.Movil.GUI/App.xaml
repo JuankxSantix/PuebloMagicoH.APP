@@ -4,8 +4,35 @@
              x:Class="PuebloMagicoH.Movil.GUI.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="ButtonPrimaryColor">#4CAF50</Color>
+            <Color x:Key="PrimaryColor">#4faa56</Color>
+            <Color x:Key="SecundaryColor">#556df9</Color>
+            <Color x:Key="TitleColor">#242424</Color>
+            <Color x:Key="TxtColor">#e0e0e0</Color>
+
+            <Style x:Key="TextNormal" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TxtColor}"/>
+            </Style>
+
+            <Style x:Key="TextTitulo" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="butttonNormal" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style x:Key="butttonSecundario" TargetType="Button" BasedOn="{StaticResource butttonNormal}">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecundaryColor}"/>
+            </Style>
+
+            <Style TargetType="ContentPage" >
+                <Setter Property="BackgroundColor" Value="White"/>
+            </Style>
         </ResourceDictionary>
+        
 
     </Application.Resources>
 </Application>
