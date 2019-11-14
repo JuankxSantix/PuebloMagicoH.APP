@@ -13,20 +13,65 @@ namespace PuebloMagicoH.Movil.GUI
 	public partial class VentanaCrearNuevoUsuario : ContentPage
 	{
         List<string> genero;
+        List<string> Estado;
+        List<string> Ciudad;
+        List<string> Ocupacion;
+        List<string> VienesPor;
+        List<string> TeEnterastePor;
 
         public VentanaCrearNuevoUsuario ()
 		{
 			InitializeComponent();
             ElementosInicalizar();
             pickerGenero.ItemsSource = genero;
+            pickerCiudad.ItemsSource = Ciudad;
+            pickerEstado.ItemsSource = Estado;
+            pickerOcupacion.ItemsSource = Ocupacion;
+            pickerTeEnterastePor.ItemsSource = TeEnterastePor;
+            pickerVienesAHuichapanPor.ItemsSource = VienesPor;
             
         }
 
         public void ElementosInicalizar()
         {
-            genero = new List<string>();
-            genero.Add("Masculino");
-            genero.Add("Femenino");
+            genero = new List<string>() {
+
+                "Masculino",
+                "Femenino"
+            };
+            Estado = new List<string>()
+            {
+                "Hidalgo",
+                "Mexico"
+            };
+            Ciudad = new List<string>()
+            {
+                "Pachuca",
+                "Mexico"
+            };
+            Ocupacion = new List<string>()
+            {
+                "Estudiante",
+                "Maestro",
+                "Campesino",
+                "Otro"
+            };
+
+            VienesPor = new List<string>()
+            {
+                "Negocios",
+                "Cambio de residencia",
+                "Divercion",
+                "Trabajo"
+            };
+            TeEnterastePor = new List<string>()
+            {
+                "Internet",
+                "Amigos",
+                "Propaganda",
+                "Informacion"
+            };
+
         }
 
      

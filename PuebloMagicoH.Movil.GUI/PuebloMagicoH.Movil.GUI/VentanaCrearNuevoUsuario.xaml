@@ -37,7 +37,7 @@
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 
                     <Label Style="{StaticResource TextNormal}" VerticalOptions="Center" Text="Nacimiento"></Label>
-                    <Label Style="{StaticResource TextNormal}" VerticalOptions="Center" Text="Nacimiento"></Label>
+                    <DatePicker x:Name="datepickerNAcimiento" ></DatePicker>
                 
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
@@ -49,8 +49,10 @@
             </StackLayout>
             
             <StackLayout Orientation="Horizontal" Grid.Row="6" HorizontalOptions="FillAndExpand">
-                <Label Style="{StaticResource TextNormal}" Text="Soy de Huichapan"></Label>
-                <Label Style="{StaticResource TextNormal}" Text="Soy de Huichapan"></Label>
+                
+                <Label Style="{StaticResource TextNormal}" Text="Soy de Huichapan" VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                <Switch HeightRequest="20" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Switch>
+            
             </StackLayout>
             
             <StackLayout Orientation="Horizontal" Grid.Row="7">
@@ -68,14 +70,14 @@
                 <Picker VerticalOptions="Center" HorizontalOptions="Center" x:Name="pickerOcupacion" WidthRequest="250" Title="Ocupacion"></Picker>
             </StackLayout>
             
-            <StackLayout Orientation="Horizontal" Grid.Row="10">
+            <StackLayout Orientation="Vertical" Grid.Row="10">
                 <Label VerticalOptions="Center" Style="{StaticResource TextNormal}" Text="Vienes a Huichapan por:"></Label>
-                <Picker VerticalOptions="Center" HorizontalOptions="Center" x:Name="pickerVienesAHuichapanPor" WidthRequest="250" Title="Seleciona una opción"></Picker>
+                <Picker VerticalOptions="Center" HorizontalOptions="FillAndExpand" x:Name="pickerVienesAHuichapanPor" Title="Seleciona una opción"></Picker>
             </StackLayout>
             
-            <StackLayout Orientation="Horizontal" Grid.Row="11">
+            <StackLayout Orientation="Vertical" Grid.Row="11">
                 <Label VerticalOptions="Center" Style="{StaticResource TextNormal}" Text="Como te enteraste de esta app:"></Label>
-                <Picker VerticalOptions="Center" HorizontalOptions="Center" x:Name="pickerTeEnterastePor" WidthRequest="250" Title="Selecciona una opción"></Picker>
+                <Picker VerticalOptions="Center" HorizontalOptions="FillAndExpand" x:Name="pickerTeEnterastePor" Title="Selecciona una opción"></Picker>
             </StackLayout>
             
             <Label Style="{StaticResource TextNormal}" Text="Que Tipo de informacion te gustaria recibir" Grid.Row="12"></Label>
@@ -83,36 +85,48 @@
             <StackLayout Grid.Row="13" Orientation="Vertical" Margin="10,5">
             
                 <StackLayout Orientation="Horizontal">
-                    <Label Style="{StaticResource TextNormal}" Text="Charreria" ></Label>
-
+                    <Label VerticalOptions="Center" Style="{StaticResource TextNormal}" Text="Charreria" ></Label>
+                    <Switch HeightRequest="15" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Switch>
                 </StackLayout>
                 
                 <StackLayout Orientation="Horizontal">
                     <Label Style="{StaticResource TextNormal}" Text="Ferias" ></Label>
-
+                    <Switch HeightRequest="15" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Switch>
                 </StackLayout>
                 
                 <StackLayout Orientation="Horizontal">
                     <Label Style="{StaticResource TextNormal}" Text="Eventos deportivos" ></Label>
-
+                    <Switch HeightRequest="15" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Switch>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
                     <Label Style="{StaticResource TextNormal}" Text="Eventos Religiosos" ></Label>
+                    <Switch HeightRequest="15" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Switch>
                 </StackLayout>
  
                 <StackLayout Orientation="Horizontal">
                     <Label Style="{StaticResource TextNormal}" Text="Gastronomia" ></Label>
+                    <Switch HeightRequest="15" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Switch>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
-                    <Label Style="{StaticResource TextNormal}" Text="Gastronomia" ></Label>
+                    <Label Style="{StaticResource TextNormal}" Text="Todos" ></Label>
+                    <Switch HeightRequest="15" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></Switch>
                 </StackLayout>
                 
             </StackLayout>
-            
-            <Label HorizontalOptions="FillAndExpand" Grid.Row="14" Style="{StaticResource TextNormal}" Text="Contraseña"/>
-            <Entry Margin="15,0" TextColor="Black" FontSize="Small" HorizontalTextAlignment="Center" Grid.Row="15" />
+
+            <StackLayout Orientation="Horizontal" Grid.Row="14">
+                <Label HorizontalOptions="FillAndExpand" Style="{StaticResource TextNormal}" Text="Contraseña:"/>
+                <Entry Margin="15,0" TextColor="Black" FontSize="Small" HorizontalTextAlignment="Center" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="15">
+                <Label HorizontalOptions="FillAndExpand" Grid.Row="16" Style="{StaticResource TextNormal}" Text="Otra vez:"/>
+                <Entry Margin="15,0" TextColor="Black" FontSize="Small" HorizontalTextAlignment="Center" Grid.Row="17" />
+            </StackLayout>
+
+            <Button Grid.Row="16" Text="Guardar" Style="{StaticResource butttonNormal}" HorizontalOptions="FillAndExpand" Margin="60,0"></Button>
 
         </Grid>
     </ContentPage.Content>
