@@ -17,10 +17,18 @@ namespace PuebloMagicoH.COMMON
         public string Error { get; private set; }
         public Repositorio()
         {
+            //User1
             //ControlPuebloMagico
+            //huichapanuser
+            
+            //User2
+            //User=NewUser_H
+            //Password=PuebloMagico
+            
+            client = new MongoClient(@"mongodb://NewUser_H:PuebloMagico@bdpueblomagicoh-shard-00-00-xg6rg.gcp.mongodb.net:27017,bdpueblomagicoh-shard-00-01-xg6rg.gcp.mongodb.net:27017,bdpueblomagicoh-shard-00-02-xg6rg.gcp.mongodb.net:27017/test?ssl=true&replicaSet=BDPuebloMagicoH-shard-0&authSource=admin&retryWrites=true&w=majority");
 
-            client = new MongoClient(@"mongodb://huichapanuser:ControlPuebloMagico@bdpueblomagicoh-shard-00-00-xg6rg.gcp.mongodb.net:27017,bdpueblomagicoh-shard-00-01-xg6rg.gcp.mongodb.net:27017,bdpueblomagicoh-shard-00-02-xg6rg.gcp.mongodb.net:27017/test?ssl=true&replicaSet=BDPuebloMagicoH-shard-0&authSource=admin&retryWrites=true&w=majority");
-            db = client.GetDatabase("BDPuebloMagicoH");
+            //client = new MongoClient(@"mongodb+srv://huichapanuser:ControlPuebloMagico@bdpueblomagicoh-xg6rg.gcp.mongodb.net/test?ssl=true");
+            db = client.GetDatabase("test");
 
         }
         private IMongoCollection<T> Collection() => db.GetCollection<T>(typeof(T).Name);

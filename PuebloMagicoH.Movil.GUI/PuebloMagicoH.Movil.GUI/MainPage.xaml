@@ -4,13 +4,13 @@
              xmlns:local="clr-namespace:PuebloMagicoH.Movil.GUI"
              xmlns:models="clr-namespace:PuebloMagicoH.COMMON.Modelos;assembly=PuebloMagicoH.COMMON"
              
-             x:Class="PuebloMagicoH.Movil.GUI.MainPage" Title="Inicio de seción">
+             x:Class="PuebloMagicoH.Movil.GUI.MainPage" Title="Inicio de sesión" >
 
     <ContentPage.BindingContext>
         <models:LoginModel/>
     </ContentPage.BindingContext>
 
-    <Grid>
+<Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -22,26 +22,24 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Image Grid.Row="0" Source="LogoHuichapan.PNG"/>
-        <Label HorizontalOptions="Center" Grid.Row="1" Style="{StaticResource TextNormal}" Text="E-mail"/>
-        <Entry Grid.Row="2" Placeholder="Usuario@gmail.com" Text="{Binding Email}"/>
+        <Label Margin="15,5" HorizontalOptions="Center" Grid.Row="1" Style="{StaticResource TextNormal}" Text="E-mail"/>
+        <Entry Margin="15,5" HorizontalTextAlignment="Center" Grid.Row="2" Placeholder="Usuario@gmail.com" Text="{Binding Email}"/>
+               
+        <Label Margin="15,5" HorizontalOptions="Center" Grid.Row="3" Style="{StaticResource TextNormal}" Text="Contraseña"/>
+        <Entry Margin="15,5" HorizontalTextAlignment="Center" Grid.Row="4" Placeholder="**********" IsPassword="True" Text="{Binding Password}"/>
 
-        <Label HorizontalOptions="Center" Grid.Row="3" Style="{StaticResource TextNormal}" Text="Cintraseña"/>
-        <Entry Grid.Row="4" Placeholder="**********" IsPassword="True" Text="{Binding Password}"/>
-
-        <Label HorizontalOptions="Center" Grid.Row="3" Style="{StaticResource TextNormal}" Text="Idioma"/>
+        <Label HorizontalOptions="Center" Grid.Row="5" Style="{StaticResource TextNormal}" Text="Idioma"/>
 
 
-        <StackLayout Orientation="Horizontal" Grid.Row="5">
+        <StackLayout Orientation="Horizontal" Grid.Row="6">
             <Label HorizontalOptions="FillAndExpand" Style="{StaticResource TextNormal}" Text="Recordar mis datos e iniciar automáticamente"/>
-
         </StackLayout>
 
-        <Button Style="{StaticResource butttonNormal}" Text="Iniciar Sesión" x:Name="btnIniciarSesion" Clicked="BtnIniciarSesion_Clicked"/>
-        <Button Style="{StaticResource butttonSecundario}" Text="Crear cuanta" x:Name="btnCrearCuenta" Clicked="BtnCrearCuenta_Clicked"/>
+        <Button Grid.Row="7"  Margin="100,5" Style="{StaticResource butttonNormal}" Text="Iniciar Sesión" x:Name="btnIniciarSesion" Clicked="BtnIniciarSesion_Clicked"/>
+        <Button Grid.Row="8" Margin="100,10" Style="{StaticResource butttonSecundario}" Text="Crear cuanta" x:Name="btnCrearCuenta" Clicked="BtnCrearCuenta_Clicked"/>
 
     </Grid>
     

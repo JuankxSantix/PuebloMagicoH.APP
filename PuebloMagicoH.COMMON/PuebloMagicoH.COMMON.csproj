@@ -11,11 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
     <Folder Include="Validadores\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="LiteDB" Version="4.1.4" />
     <PackageReference Include="MongoDB.Driver" Version="2.9.3" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.947036" />
   </ItemGroup>

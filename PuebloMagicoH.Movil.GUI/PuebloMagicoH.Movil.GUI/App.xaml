@@ -10,7 +10,8 @@
             <Color x:Key="TxtColor">#e0e0e0</Color>
 
             <Style x:Key="TextNormal" TargetType="Label">
-                <Setter Property="TextColor" Value="{StaticResource TxtColor}"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
 
             <Style x:Key="TextTitulo" TargetType="Label">
@@ -31,6 +32,7 @@
             <Style TargetType="ContentPage" >
                 <Setter Property="BackgroundColor" Value="White"/>
             </Style>
+
         </ResourceDictionary>
         
 

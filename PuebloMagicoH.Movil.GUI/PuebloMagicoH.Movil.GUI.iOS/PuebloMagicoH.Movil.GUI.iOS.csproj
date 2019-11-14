@@ -148,6 +148,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LiteDB">
+      <Version>4.1.4</Version>
+    </PackageReference>
     <PackageReference Include="MongoDB.Driver">
       <Version>2.9.3</Version>
     </PackageReference>
