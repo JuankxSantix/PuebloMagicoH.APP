@@ -25,10 +25,10 @@ namespace PuebloMagicoH.COMMON
             //User=NewUser_H
             //Password=PuebloMagico
             
-            client = new MongoClient(@"mongodb://NewUser_H:PuebloMagico@bdpueblomagicoh-shard-00-00-xg6rg.gcp.mongodb.net:27017,bdpueblomagicoh-shard-00-01-xg6rg.gcp.mongodb.net:27017,bdpueblomagicoh-shard-00-02-xg6rg.gcp.mongodb.net:27017/test?ssl=true&replicaSet=BDPuebloMagicoH-shard-0&authSource=admin&retryWrites=true&w=majority");
+            client = new MongoClient(@"mongodb://Pueblo:magico19.mlab.com:40948/huichapan");
 
             //client = new MongoClient(@"mongodb+srv://huichapanuser:ControlPuebloMagico@bdpueblomagicoh-xg6rg.gcp.mongodb.net/test?ssl=true");
-            db = client.GetDatabase("test");
+            db = client.GetDatabase("huichapan");
 
         }
         private IMongoCollection<T> Collection() => db.GetCollection<T>(typeof(T).Name);

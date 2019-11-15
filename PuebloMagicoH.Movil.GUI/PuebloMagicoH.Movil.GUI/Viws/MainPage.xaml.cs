@@ -4,6 +4,7 @@ using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.COMMON.Modelos;
 using PuebloMagicoH.DAL;
+using PuebloMagicoH.Movil.GUI.Viws;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,13 +30,22 @@ namespace PuebloMagicoH.Movil.GUI
 
         private void BtnIniciarSesion_Clicked(object sender, EventArgs e)
         {
-            //Usuarios usuarios= manejadorDeUsuarios.Listar.Where(e=>e.Correo==)
-            //Usuarios usuario = manejadorDeUsuarios.Query(p => p.Correo == model.Email && p.Contrasenia == model.Password).SingleOrDefault();
-
+            //Usuarios usuarios = manejadorDeUsuarios.Listar.Where(e => e.Correo ==)
+            //Usuarios usuario = repositorio.Query(p => p.Correo == model.Email && p.Contrasenia == model.Password).SingleOrDefault();
             //if (usuario != null)
             //{
-            //    DisplayAlert("Huichapan Pueblo Magico", "Bienvenido"+usuario.NombreDeUsuario, "ok");
-            //    //ingresa
+
+            //}
+
+            //Usuarios usuario = manejadorDeUsuarios.BuscarContrasenia(model.Password);
+            //Usuarios usuario1 = manejadorDeUsuarios.BuscarCorreo(model.Email);
+
+
+            //if (usuario.ID == usuario1.ID)
+            //{
+            //    DisplayAlert("Huichapan Pueblo Magico", "Bienvenido" + usuario.NombreDeUsuario, "ok");
+
+                Navigation.PushAsync(new PageQueDeceasHacerHoy());
             //}
             //else
             //{

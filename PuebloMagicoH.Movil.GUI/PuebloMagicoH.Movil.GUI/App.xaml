@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PuebloMagicoH.Movil.GUI.App">
+             x:Class="PuebloMagicoH.Movil.GUI.App" NavigationPage.HasNavigationBar="True">
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="PrimaryColor">#4faa56</Color>
             <Color x:Key="SecundaryColor">#556df9</Color>
+            <Color x:Key="txtSubtitulo">#6c6c6c</Color>
             <Color x:Key="TitleColor">#242424</Color>
             <Color x:Key="TxtColor">#e0e0e0</Color>
 
@@ -17,6 +18,17 @@
             <Style x:Key="TextTitulo" TargetType="Label">
                 <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="btnImagen" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <!--<Setter Property="CornerRadius" Value="15"/>-->
+
+            </Style>
+            
+            <Style x:Key="TextSubTitulo" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource txtSubtitulo}"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
             </Style>
 
             <Style x:Key="butttonNormal" TargetType="Button">

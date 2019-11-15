@@ -30,10 +30,15 @@ namespace PuebloMagicoH.DAL
             entidad.ID = Guid.NewGuid().ToString();
             try
             {
+                int r;
                 using (var db = new LiteDatabase(DBName))
                 {
+
                     var colection = db.GetCollection<Usuarios>(TableName);
                     colection.Insert(entidad);
+                    r=colection.Count();
+                    r = 0;
+                    //db.GetCollection<Usuarios>(TableName).Insert(entidad);
                 }
                 return true;
             }
@@ -48,14 +53,14 @@ namespace PuebloMagicoH.DAL
         {
             try
             {
-                int Yr;
+                int r;
                 using (var db = new LiteDatabase(DBName))
                 {
                     
                     var colection = db.GetCollection<Usuarios>(TableName);
-                    colection.Delete(e => e.ID == Id);
+                    r= colection.Delete(e => e.ID == Id);
                 }
-                return true;
+                return r>1;
             }
             catch (Exception)
             {

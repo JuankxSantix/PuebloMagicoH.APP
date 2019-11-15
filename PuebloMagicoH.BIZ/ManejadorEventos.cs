@@ -31,6 +31,11 @@ namespace PuebloMagicoH.BIZ
             return repositorio.Delete(id);
         }
 
+        public List<Eventos> EvendoDelDia(DateTime Fecha)
+        {
+            return Listar.Where(e => e.FechaInicio >= Fecha || e.FechaFinal <= Fecha).ToList();
+        }
+
         public List<Eventos> EventosEntre(DateTime FechaInicio, DateTime FechaFin)
         {
             return Listar.Where(e => e.FechaInicio == FechaInicio && e.FechaFinal == FechaFin).ToList();

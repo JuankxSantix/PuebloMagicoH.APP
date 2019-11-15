@@ -7,5 +7,7 @@ namespace PuebloMagicoH.COMMON.Interfaces
 {
     public interface IManejadorDeUsuarios:IManejadorGenerico<Usuarios>
     {
+        Usuarios BuscarCorreo(string Correo);
+        Usuarios BuscarContrasenia(string Contrasenia);
     }
 }

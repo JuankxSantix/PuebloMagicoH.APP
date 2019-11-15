@@ -10,8 +10,9 @@ namespace PuebloMagicoH.Movil.GUI
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new MainPage());
+            var pagina = new NavigationPage(new MainPage());
+            pagina.BarBackgroundColor = (Color)App.Current.Resources["PrimaryColor"];
+            MainPage = pagina;
         }
 
         protected override void OnStart()

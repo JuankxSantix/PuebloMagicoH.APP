@@ -21,6 +21,16 @@ namespace PuebloMagicoH.BIZ
             return repositorio.Create(entidad);
         }
 
+        public Usuarios BuscarContrasenia(string Contrasenia)
+        {
+            return Listar.Where(e => e.Contrasenia == Contrasenia).SingleOrDefault();
+        }
+
+        public Usuarios BuscarCorreo(string Correo)
+        {
+            return Listar.Where(e => e.Correo == Correo).SingleOrDefault();
+        }
+
         public Usuarios BuscarPorID(string Id)
         {
             return Listar.Where(e => e.ID == Id).SingleOrDefault();
