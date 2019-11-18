@@ -36,5 +36,10 @@ namespace PuebloMagicoH.Movil.GUI.Viws
         {
             Navigation.PushAsync(new PageDirectorioComerciantes());
         }
+
+        private void ImgBtnHoteles_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageHoteles());
+        }
     }
 }

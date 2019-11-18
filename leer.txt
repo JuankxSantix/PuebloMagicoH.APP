@@ -1,0 +1,15 @@
+namebd=huichapandb
+huchauser
+User1= Admin
+pasword= admin1234
+
+Unable to authenticate using sasl protocol mechanism SCRAM-SHA-1.
+
+
+27015 a 27017
+
+Employee emp = new Employee()
+{
+    Id = Guid.NewGuid().ToString(),
+    Name = "Employee_" + DateTime.UtcNow.ToString("yyyy_MMMM_dd")
+};

@@ -1,4 +1,5 @@
 ﻿using PuebloMagicoH.BIZ;
+using PuebloMagicoH.COMMON;
 using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
@@ -16,6 +17,7 @@ namespace PuebloMagicoH.Movil.GUI
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class VentanaCrearNuevoUsuario : ContentPage
 	{
+        //Repositorio<Usuarios> repositorio;
         List<string> genero;
         List<string> Estado;
         List<string> Ciudad;
@@ -23,20 +25,15 @@ namespace PuebloMagicoH.Movil.GUI
         List<string> VienesPor;
         List<string> TeEnterastePor;
         IManejadorDeUsuarios manejadorDeUsuarios;
-        Usuarios usuario;
 
         public VentanaCrearNuevoUsuario ()
 		{
 			InitializeComponent();
-            manejadorDeUsuarios = new ManejadorUsuarios(new RepositorioDeUsuarios());
+            //repositorio = new Repositorio<Usuarios>();
+            manejadorDeUsuarios = new ManejadorUsuarios(new RepositorioGenerico<Usuarios>());
             ElementosInicalizar();
             
-            pickerGenero.ItemsSource = genero;
-            pickerCiudad.ItemsSource = Ciudad;
-            pickerEstado.ItemsSource = Estado;
-            pickerOcupacion.ItemsSource = Ocupacion;
-            pickerTeEnterastePor.ItemsSource = TeEnterastePor;
-            pickerVienesAHuichapanPor.ItemsSource = VienesPor;
+            
             
         }
 
@@ -79,6 +76,14 @@ namespace PuebloMagicoH.Movil.GUI
                 "Informacion"
             };
 
+
+            pickerGenero.ItemsSource = genero;
+            pickerCiudad.ItemsSource = Ciudad;
+            pickerEstado.ItemsSource = Estado;
+            pickerOcupacion.ItemsSource = Ocupacion;
+            pickerTeEnterastePor.ItemsSource = TeEnterastePor;
+            pickerVienesAHuichapanPor.ItemsSource = VienesPor;
+
         }
         
         private void BtnGuardar_Clicked(object sender, EventArgs e)
@@ -87,7 +92,7 @@ namespace PuebloMagicoH.Movil.GUI
             {
                 if (txtContrasenia.Text == txtContrasenia.Text)
                 {
-                    usuario = new Usuarios()
+                   Usuarios usuario = new Usuarios()
                     {
                         Ciudad = pickerCiudad.SelectedItem.ToString(),
                         Contrasenia = txtContrasenia.Text,
@@ -100,18 +105,23 @@ namespace PuebloMagicoH.Movil.GUI
                         Ocupacion = pickerOcupacion.SelectedItem.ToString(),
                         FechaDeNacimiento = datepickerNAcimiento.Date,
 
-
                     };
-                    if (manejadorDeUsuarios.AGREGAR(usuario))
-                    {
-                        DisplayAlert("Huichapan Pueblo Magico", "Tu registro fue exitoso\nInicia sesión", "Aceptar");
-                        Navigation.PushAsync(new MainPage());
-                    }
-                    else
-                    {
-                        DisplayAlert("Huichapan Pueblo Magico", "Error\nNo se puede realizar tu registro por el momento", "Aceptar", "Canselar");
-                    }
-                    
+                    manejadorDeUsuarios.AGREGAR(usuario);
+                    //repositorio.Create(usuario);
+                    //int con=repositorio.Read.Count();
+                    //if (con>0)
+
+                    //{
+                    //    DisplayAlert("Huichapan Pueblo Magico", "Tu registro fue exitoso\nInicia sesión", "Aceptar");
+                    //    Navigation.PushAsync(new MainPage());
+                    //}
+                    //else
+                    //{
+                    //    DisplayAlert("Huichapan Pueblo Magico", "Error\nNo se puede realizar tu registro por el momento", "Aceptar", "Canselar");
+                    //}
+
+                    DisplayAlert("Huichapan Pueblo Magico", "Usuario "+manejadorDeUsuarios.Listar.Where(d=>d.Correo==usuario.Correo).ToString(), "Aceptar", "Canselar");
+
                 }
                 else
                 {

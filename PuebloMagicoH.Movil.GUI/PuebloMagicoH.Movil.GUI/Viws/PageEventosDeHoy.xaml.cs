@@ -20,7 +20,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
         public PageEventosDeHoy ()
 		{
 			InitializeComponent ();
-            manejadorDeEventos = new ManejadorEventos(new RepositorioDeEventos());
+            //manejadorDeEventos = new ManejadorEventos(new RepositorioDeEventos());
             lblFecha.Text =DateTime.Now.ToLongDateString();
             //CollectionDeEventos.ItemsSource = manejadorDeEventos.EvendoDelDia(DateTime.Now);
         }

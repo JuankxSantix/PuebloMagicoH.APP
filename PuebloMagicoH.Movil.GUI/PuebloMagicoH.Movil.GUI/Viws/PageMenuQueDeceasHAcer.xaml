@@ -40,7 +40,7 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="Hoteles.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="Hoteles.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnHoteles" Clicked="ImgBtnHoteles_Clicked"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Hoteles"></Label>
                 </StackLayout>
 

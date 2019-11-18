@@ -1,4 +1,5 @@
-﻿using PuebloMagicoH.COMMON.Entidades;
+﻿using MongoDB.Bson;
+using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,31 +10,31 @@ namespace PuebloMagicoH.BIZ
 {
     public class ManejadorAtractivosTuristicos : IManejadorDeAtractivosTuristicos
     {
-        IRepositorio<AtractivosTuristicos> repositorio;
-        public ManejadorAtractivosTuristicos(IRepositorio<AtractivosTuristicos> repositoio)
+        IRepositorio<AtractivosTuristicos> repositorio1;
+        public ManejadorAtractivosTuristicos(IRepositorio<AtractivosTuristicos> repositorio)
         {
-            this.repositorio = repositorio;
+            this.repositorio1 = repositorio;
         }
-        public List<AtractivosTuristicos> Listar => repositorio.Read;
+        public List<AtractivosTuristicos> Listar => repositorio1.Read;
 
         public bool AGREGAR(AtractivosTuristicos entidad)
         {
-            return repositorio.Create(entidad);
+            return repositorio1.Create(entidad);
         }
 
-        public AtractivosTuristicos BuscarPorID(string Id)
+        public AtractivosTuristicos BuscarPorID(ObjectId Id)
         {
             return Listar.Where(e => e.ID == Id).SingleOrDefault();
         }
 
-        public bool Eliminar(string id)
+        public bool Eliminar(ObjectId id)
         {
-            return repositorio.Delete(id);
+            return repositorio1.Delete(id);
         }
 
         public bool Modificar(AtractivosTuristicos entidad)
         {
-            return repositorio.Update(entidad);
+            return repositorio1.Update(entidad);
         }
     }
 }

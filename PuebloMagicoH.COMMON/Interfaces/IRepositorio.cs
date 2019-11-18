@@ -1,4 +1,5 @@
-﻿using PuebloMagicoH.COMMON.Entidades;
+﻿using MongoDB.Bson;
+using PuebloMagicoH.COMMON.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,6 @@ namespace PuebloMagicoH.COMMON.Interfaces
         bool Create(T entidad);
         List<T> Read { get; }
         bool Update(T entidadModificada);
-        bool Delete(string Id);
+        bool Delete(ObjectId Id);
     }
 }

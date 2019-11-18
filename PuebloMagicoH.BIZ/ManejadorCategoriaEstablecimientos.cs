@@ -1,4 +1,6 @@
-﻿using PuebloMagicoH.COMMON.Entidades;
+﻿
+using MongoDB.Bson;
+using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -21,12 +23,12 @@ namespace PuebloMagicoH.BIZ
             return repositorio.Create(entidad);
         }
 
-        public CategoriaEstablecimientos BuscarPorID(string Id)
+        public CategoriaEstablecimientos BuscarPorID(ObjectId Id)
         {
             return Listar.Where(e => e.ID == Id).SingleOrDefault();
         }
 
-        public bool Eliminar(string id)
+        public bool Eliminar(ObjectId id)
         {
             return repositorio.Delete(id);
         }

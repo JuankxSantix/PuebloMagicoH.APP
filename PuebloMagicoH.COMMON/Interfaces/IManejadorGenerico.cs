@@ -1,4 +1,5 @@
-﻿using PuebloMagicoH.COMMON.Entidades;
+﻿using MongoDB.Bson;
+using PuebloMagicoH.COMMON.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,8 +10,8 @@ namespace PuebloMagicoH.COMMON.Interfaces
     {
         bool AGREGAR(T entidad);
         List<T> Listar { get; }
-        bool Eliminar(string id);
+        bool Eliminar(ObjectId id);
         bool Modificar(T entidad);
-        T BuscarPorID(String Id);
+        T BuscarPorID(ObjectId Id);
     }
 }

@@ -6,9 +6,9 @@ namespace PuebloMagicoH.COMMON.Entidades
 {
     public class Monumentos:BaseDTO
     {
-        public int NombreMonumentos { get; set; }
-        public int Direccion { get; set; }
-        public int TipoDeMonumentos { get; set; }
-        public int URL { get; set; }
+        public string NombreMonumentos { get; set; }
+        public string Direccion { get; set; }
+        public string TipoDeMonumentos { get; set; }
+        public string URL { get; set; }
     }
 }
