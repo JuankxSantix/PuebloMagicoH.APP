@@ -1,0 +1,5 @@
+xam.plugin.geolocator 
+
+evento //pressed
+
+buscar que es un metodo sincrono

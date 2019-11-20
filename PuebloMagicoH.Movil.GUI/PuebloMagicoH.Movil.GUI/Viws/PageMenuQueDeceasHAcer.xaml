@@ -59,7 +59,7 @@
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Turismo religioso"></Label>
                 </StackLayout>
 
-                <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical" VerticalOptions="Center">
+                <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical" VerticalOptions="Center" >
                     <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="SeguridadPublica1.png" Style="{StaticResource btnImagen}"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Seguridad publica"></Label> 
                 </StackLayout>
@@ -70,7 +70,7 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="3" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="ComparteUnaFotografia.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="ComparteUnaFotografia.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnCompartitFotografia" Clicked="ImgBtnCompartitFotografia_Clicked"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Comparte una fotografica"></Label>
                 </StackLayout>
 

@@ -14,10 +14,18 @@ namespace PuebloMagicoH.DAL
         private IMongoDatabase db;
         public RepositorioGenerico()
         {
+
+            //Base de datos creada//
+
             //huichapan
             //juankx1
-            client = new MongoClient(new MongoUrl("mongodb://huchauser:admin1234@ds063449.mlab.com:63449/huichapandb:retryWrites=false"));
-            db = client.GetDatabase("huichapandb");
+            //client = new MongoClient(new MongoUrl("mongodb://huchauser:admin1234@ds063449.mlab.com:63449/huichapandb:retryWrites=false"));
+            //db = client.GetDatabase("huichapandb");
+
+
+            //Base de datos prueba (utilizada de un proyecto anterior)//
+            client = new MongoClient(new MongoUrl("mongodb://JuanCarlosO:17021020@ds133360.mlab.com:33360/lapapeleriadamore"));
+            db = client.GetDatabase("lapapeleriadamore");
         }
         private IMongoCollection<T> Collection()
         {

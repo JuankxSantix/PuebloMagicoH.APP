@@ -41,5 +41,10 @@ namespace PuebloMagicoH.Movil.GUI.Viws
         {
             Navigation.PushAsync(new PageHoteles());
         }
+
+        private void ImgBtnCompartitFotografia_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageCompartirUnaFoto());
+        }
     }
 }

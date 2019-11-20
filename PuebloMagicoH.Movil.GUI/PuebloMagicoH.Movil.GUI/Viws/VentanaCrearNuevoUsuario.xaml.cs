@@ -106,7 +106,14 @@ namespace PuebloMagicoH.Movil.GUI
                         FechaDeNacimiento = datepickerNAcimiento.Date,
 
                     };
-                    manejadorDeUsuarios.AGREGAR(usuario);
+                    if(manejadorDeUsuarios.AGREGAR(usuario))
+                    {
+                        DisplayAlert("Huichapan Pueblo Magico", "Usuario " + manejadorDeUsuarios.Listar.Where(d => d.Correo == usuario.Correo).ToString(), "Aceptar", "Canselar");
+                    }
+                    else
+                    {
+                        DisplayAlert("Huichapan Pueblo Magico", "No entro \n Usuario " + manejadorDeUsuarios.Listar.Where(d => d.Correo == usuario.Correo).ToString(), "Aceptar", "Canselar");
+                    }
                     //repositorio.Create(usuario);
                     //int con=repositorio.Read.Count();
                     //if (con>0)
@@ -120,7 +127,6 @@ namespace PuebloMagicoH.Movil.GUI
                     //    DisplayAlert("Huichapan Pueblo Magico", "Error\nNo se puede realizar tu registro por el momento", "Aceptar", "Canselar");
                     //}
 
-                    DisplayAlert("Huichapan Pueblo Magico", "Usuario "+manejadorDeUsuarios.Listar.Where(d=>d.Correo==usuario.Correo).ToString(), "Aceptar", "Canselar");
 
                 }
                 else
