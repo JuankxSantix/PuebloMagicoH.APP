@@ -108,11 +108,11 @@ namespace PuebloMagicoH.Movil.GUI
                     };
                     if(manejadorDeUsuarios.AGREGAR(usuario))
                     {
-                        DisplayAlert("Huichapan Pueblo Magico", "Usuario " + manejadorDeUsuarios.Listar.Where(d => d.Correo == usuario.Correo).ToString(), "Aceptar", "Canselar");
+                        DisplayAlert("Huichapan Pueblo Magico", "Usuario "+usuario.NombreDeUsuario+"\n creado correctamente", "Aceptar", "Canselar");
                     }
                     else
                     {
-                        DisplayAlert("Huichapan Pueblo Magico", "No entro \n Usuario " + manejadorDeUsuarios.Listar.Where(d => d.Correo == usuario.Correo).ToString(), "Aceptar", "Canselar");
+                        DisplayAlert("Huichapan Pueblo Magico", "No se ha podido registrar su usuario \npor favor intente mas tarde", "Aceptar");
                     }
                     //repositorio.Create(usuario);
                     //int con=repositorio.Read.Count();

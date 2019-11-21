@@ -7,7 +7,7 @@ namespace PuebloMagicoH.COMMON.Entidades
 {
     public abstract class BaseDTO
     {
-        public ObjectId ID { get; set; }
+        public ObjectId id { get; set; }
         //public DateTime? FechaYHora { get; set; }
         //public string Notas { get; set; }
         //public string IDUsuarioModificador { get; set; }

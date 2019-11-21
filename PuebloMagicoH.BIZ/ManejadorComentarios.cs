@@ -24,7 +24,7 @@ namespace PuebloMagicoH.BIZ
 
         public Comentarios BuscarPorID(ObjectId Id)
         {
-            return Listar.Where(e => e.ID == Id).SingleOrDefault();
+            return Listar.Where(e => e.id == Id).SingleOrDefault();
         }
 
         public bool Eliminar(ObjectId id)

@@ -6,7 +6,7 @@
         <ScrollView>
 
             <StackLayout>
-                <Button Text="Capturar" x:Name="btnTomarFoto" Pressed="BtnTomarFoto_Pressed"></Button>
+                <Button Text="Capturar" x:Name="btnTomarFoto" Clicked="BtnTomarFoto_Clicked"></Button>
                 <Image x:Name="MyImage" HeightRequest="3000" WidthRequest="300"/>
             </StackLayout>
             

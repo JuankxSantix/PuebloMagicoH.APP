@@ -73,7 +73,7 @@ namespace PuebloMagicoH.COMMON
         private IMongoCollection<T> Collection() => db.GetCollection<T>(typeof(T).Name);
         public T Create(T entidad)
         {
-            entidad.ID = ObjectId.GenerateNewId();
+            entidad.id = ObjectId.GenerateNewId();
          //   entidad.FechaYHora = DateTime.Now;
             try
             {
@@ -114,7 +114,7 @@ namespace PuebloMagicoH.COMMON
             //entidad.FechaYHora = DateTime.Now;
             try
             {
-                int r = (int)Collection().ReplaceOne(e => e.ID == entidad.ID, entidad).ModifiedCount;
+                int r = (int)Collection().ReplaceOne(e => e.id == entidad.id, entidad).ModifiedCount;
                 Error = r == 1 ? "Elemento modificado" : "No se modifico ningun elemento";
                 Resulatado = r == 1;
             }
@@ -131,7 +131,7 @@ namespace PuebloMagicoH.COMMON
         {
             try
             {
-                int r = (int)Collection().DeleteOne(e => e.ID == entidad.ID).DeletedCount;
+                int r = (int)Collection().DeleteOne(e => e.id == entidad.id).DeletedCount;
                 Resulatado = r == 1;
                 Error = Resulatado ? "Elemento eliminado" : "No se puede eliminar el elemento";
             }
@@ -145,7 +145,7 @@ namespace PuebloMagicoH.COMMON
 
         public T SearchbyID(ObjectId id)
         {
-            return Collection().Find(e => e.ID == id).SingleOrDefault();
+            return Collection().Find(e => e.id == id).SingleOrDefault();
         }
 
         public IEnumerable<T> Query(Expression<Func<T, bool>> predicado)

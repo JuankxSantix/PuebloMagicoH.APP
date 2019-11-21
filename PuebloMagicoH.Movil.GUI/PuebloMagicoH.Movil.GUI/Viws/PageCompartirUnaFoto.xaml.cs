@@ -33,10 +33,13 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             }
             else
             {
+                var newPhotoId = Guid.NewGuid();
                 var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
                 {
-                    Directory="Demo Camara",
-                    Name=DateTime.Now+"_test.jpg"
+                    Name = newPhotoId.ToString(),
+                    SaveToAlbum = true,
+                    DefaultCamera = CameraDevice.Rear,
+                    Directory = "Demo"
                 });
                 if(file == null)
                 {
@@ -53,45 +56,45 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             }
         }
 
-        private async void BtnTomarFoto_Pressed(object sender, EventArgs e)
-        {
-            var IsInitiliaze = await CrossMedia.Current.Initialize();
-            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported || !CrossMedia.IsSupported || !IsInitiliaze)
-            {
-                await DisplayAlert("Error", "La camara no se encuentra disponible", "ok");
-                return;
-            }
+        //private async void BtnTomarFoto_Pressed(object sender, EventArgs e)
+        //{
+        //    var IsInitiliaze = await CrossMedia.Current.Initialize();
+        //    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported || !CrossMedia.IsSupported || !IsInitiliaze)
+        //    {
+        //        await DisplayAlert("Error", "La camara no se encuentra disponible", "ok");
+        //        return;
+        //    }
 
-            var newPhotoId = Guid.NewGuid();
+        //    var newPhotoId = Guid.NewGuid();
 
-            using (var potho = await CrossMedia.Current.TakePhotoAsync(new StoreVideoOptions()
-            {
-                Name = newPhotoId.ToString(),
-                SaveToAlbum = true,
-                DefaultCamera = CameraDevice.Rear,
-                Directory = "Demo Camera"
-            }))
-            {
-                if (string.IsNullOrWhiteSpace(potho?.Path))
-                {
-                    return;
-                }
+        //    using (var potho = await CrossMedia.Current.TakePhotoAsync(new StoreVideoOptions()
+        //    {
+        //        Name = newPhotoId.ToString(),
+        //        SaveToAlbum = true,
+        //        DefaultCamera = CameraDevice.Rear,
+        //        Directory = "Demo"
+        //    }))
+        //    {
+        //        if (string.IsNullOrWhiteSpace(potho?.Path))
+        //        {
+        //            return;
+        //        }
 
-                var newPhotoMedia = new MediaModel()
-                {
-                    MediaId = newPhotoId,
-                    path = potho.Path,
-                    LocalDateTime = DateTime.Now
-                };
+        //        var newPhotoMedia = new MediaModel()
+        //        {
+        //            MediaId = newPhotoId,
+        //            path = potho.Path,
+        //            LocalDateTime = DateTime.Now
+        //        };
 
-                Photos.Add(newPhotoMedia);
-
-
-                potho.Dispose();
+        //        Photos.Add(newPhotoMedia);
 
 
-            }
+        //        potho.Dispose();
 
-        }
+
+        //    }
+
+        //}
     }
 }
