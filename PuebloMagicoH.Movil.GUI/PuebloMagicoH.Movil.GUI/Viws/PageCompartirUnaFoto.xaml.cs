@@ -47,55 +47,91 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 
         //        MyImage.Source = ImageSource.FromStream(() =>
         //          {
-        //              var stream = file.GetStream();
-        //              return stream;
-        //          });
+        ////              var stream = file.GetStream();
+        ////              return stream;
+        ////          });
+        ////    }
+        ////}
+
+        //private async void BtnTomarFoto_Pressed(object sender, EventArgs e)
+        //{
+        //    var IsInitiliaze = await CrossMedia.Current.Initialize();
+
+        //    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported || !CrossMedia.IsSupported || !IsInitiliaze)
+        //    {
+        //        await DisplayAlert("Error", "La camara no se encuentra disponible", "ok");
+        //        return;
         //    }
+
+        //    var newPhotoId = Guid.NewGuid();
+
+        //    using (var potho = await CrossMedia.Current.TakePhotoAsync(new StoreVideoOptions()
+        //    {
+        //        Name = newPhotoId.ToString(),
+        //        SaveToAlbum = true,
+        //        DefaultCamera = CameraDevice.Rear,
+        //        Directory = "Demo",
+        //        CustomPhotoSize=50
+        //    }))
+        //    {
+        //        if (string.IsNullOrWhiteSpace(potho?.Path))
+        //        {
+        //            return;
+        //        }
+
+        //        var newPhotoMedia = new MediaModel()
+        //        {
+        //            MediaId = newPhotoId,
+        //            Path = potho.Path,
+        //            LocalDateTime = DateTime.Now
+        //        };
+
+        //        Photos.Add(newPhotoMedia);
+
+
+        //        potho.Dispose();
+
+
+        //    }
+            
+        //    ListPhotos.ItemsSource = Photos;
+
         //}
 
-        private async void BtnTomarFoto_Pressed(object sender, EventArgs e)
+
+        private async void BtnHacerUnaFoto_Clicked(object sender, EventArgs e)
         {
-            var IsInitiliaze = await CrossMedia.Current.Initialize();
-
-            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported || !CrossMedia.IsSupported || !IsInitiliaze)
+            var opciones_Almacenamiento = new StoreCameraMediaOptions()
             {
-                await DisplayAlert("Error", "La camara no se encuentra disponible", "ok");
-                return;
-            }
-
-            var newPhotoId = Guid.NewGuid();
-
-            using (var potho = await CrossMedia.Current.TakePhotoAsync(new StoreVideoOptions()
-            {
-                Name = newPhotoId.ToString(),
                 SaveToAlbum = true,
-                DefaultCamera = CameraDevice.Rear,
-                Directory = "Demo",
-                CustomPhotoSize=50
-            }))
+                Name = "MiFoto.jpg"
+
+            };
+            var foto = await CrossMedia.Current.TakePhotoAsync(opciones_Almacenamiento);
+            MiImagen.Source = ImageSource.FromStream(() =>
             {
-                if (string.IsNullOrWhiteSpace(potho?.Path))
+                var stream = foto.GetStream();
+                foto.Dispose();
+                return stream;
+            });
+        }
+
+        private async void BtnSeleccionarUnaImagen_Clicked(object sender, EventArgs e)
+        {
+            if (CrossMedia.Current.IsTakePhotoSupported)
+            {
+                var imagen = await CrossMedia.Current.PickPhotoAsync();
+                if (imagen != null)
                 {
-                    return;
+                    MiImagen.Source = ImageSource.FromStream(() =>
+                    {
+                        var stream = imagen.GetStream();
+                        imagen.Dispose();
+                        return stream;
+                    });
+
                 }
-
-                var newPhotoMedia = new MediaModel()
-                {
-                    MediaId = newPhotoId,
-                    Path = potho.Path,
-                    LocalDateTime = DateTime.Now
-                };
-
-                Photos.Add(newPhotoMedia);
-
-
-                potho.Dispose();
-
-
             }
-            
-            ListPhotos.ItemsSource = Photos;
-
         }
     }
 }

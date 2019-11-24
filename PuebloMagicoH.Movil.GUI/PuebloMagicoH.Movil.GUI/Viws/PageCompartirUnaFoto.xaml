@@ -7,9 +7,11 @@
 
             <StackLayout>
 
-                <Button Text="Capturar" x:Name="btnTomarFoto" Pressed="BtnTomarFoto_Pressed"></Button>
+                <Image x:Name="MiImagen"></Image>
+                <Button Text="Hacer una foto" x:Name="BtnHacerUnaFoto" Clicked="BtnHacerUnaFoto_Clicked"></Button>
+                <Button Text="Seleccionar una imagen" x:Name="btnSeleccionarUnaImagen" Clicked="BtnSeleccionarUnaImagen_Clicked"></Button>
 
-                <ListView x:Name="ListPhotos">
+                <!--<ListView x:Name="ListPhotos">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -19,11 +21,11 @@
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </ListView>
-                
+                </ListView>-->
+
             </StackLayout>
-            
-            
+
+
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
