@@ -46,5 +46,55 @@ namespace PuebloMagicoH.Movil.GUI.Viws
         {
             Navigation.PushAsync(new PageCompartirUnaFoto());
         }
+
+        private void ImgBtnDondeComer_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageDondeComer());
+        }
+
+        private void ImgBtnDireccionDeBalnearios_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageDirectorioDeBalnearios());
+        }
+
+        private void ImgBtnTurismoReligioso_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageTurismoReligioso());
+        }
+
+        private void ImgBtnSeguridadPublica_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageSeguridadPublica());
+        }
+
+        private void ImgBtnServiciosDeEmergencia_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageServiciosDeEmergencia());
+        }
+
+        private void ImgBtnContactaConUnGuiaTuristico_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageContactarConUnGuiaTuristico());
+        }
+
+        private void ImgBtnAtractivosTuristicos_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageAtractivosTuristicos());
+        }
+
+        private void ImgBtnMonumentos_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageMonumentos());
+        }
+
+        private void ImgBtnPromociones_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PagePromociones());
+        }
+
+        private void ImgBtnAyudanosAMejorar_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageAyudanosAMejorar());
+        }
     }
 }

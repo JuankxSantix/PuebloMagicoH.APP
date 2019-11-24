@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PuebloMagicoH.Movil.GUI.Viws.PageAyudanosAMejorar" Title="Ayudanos a mejorar">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label VerticalOptions="Center" HorizontalTextAlignment="Start" x:Name="lblTexto"></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Grid.Row="1" >
+                    <Label VerticalOptions="Center" HorizontalTextAlignment="Start" HorizontalOptions="Start" Text="Comentario:"></Label>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End" Grid.Row="1">
+                    <Label Text="Es una queja:" HorizontalOptions="End" HorizontalTextAlignment="End"/>
+                    <Switch HeightRequest="15" VerticalOptions="Center" HorizontalOptions="End" ></Switch>
+                </StackLayout>
+                <Frame BorderColor="Black" Grid.Row="4"/>
+                <Editor Grid.Row="2" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+
+                </Editor>
+
+                <Label Text="Deceas incluir una fotos (opcional)" Grid.Row="3" HorizontalOptions="Start"/>
+                <Frame BorderColor="Black" Grid.Row="4">
+                    <Image x:Name="SouceDeImagen" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </Frame>
+                <StackLayout Grid.Row="5" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Frame 
+                        Grid.Row="8"
+                        Padding="0,0,0,-1"
+                        CornerRadius="15"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        HasShadow="True"
+                        HorizontalOptions="Center"
+                        IsClippedToBounds="True"/>
+                    <Button Text="Tomar Foto" Style="{StaticResource butttonNormal}"/>
+                    <Frame 
+                        Grid.Row="8"
+                        Padding="0,0,0,-1"
+                        CornerRadius="15"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        HasShadow="True"
+                        HorizontalOptions="Center"
+                        IsClippedToBounds="True"/>
+                    <Button Text="Guardar" Style="{StaticResource butttonNormal}"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

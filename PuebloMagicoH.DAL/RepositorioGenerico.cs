@@ -18,17 +18,11 @@ namespace PuebloMagicoH.DAL
 
             //Base de datos creada//
 
-            //huichapan
-            //juankx1
+            //User= huichapan
+            //password= juankx1
+
             client = new MongoClient(new MongoUrl(@"mongodb://huichapan:juankx1@ds063449.mlab.com:63449/huichapandb?retryWrites=false&AuthMechanism=SCRAM-SHA-1"));
             db = client.GetDatabase("huichapandb");
-
-
-           // Base de datos prueba (utilizada de un proyecto anterior)//
-            //lient = new MongoClient(new MongoUrl("mongodb://JuanCarlosO:17021020@ds133360.mlab.com:33360/lapapeleriadamore:retryWrites=false"));
-            //db = client.GetDatabase("lapapeleriadamore");
-
-
 
             //string user;     // the user name
             //string database; // the name of the database in which the user is defined

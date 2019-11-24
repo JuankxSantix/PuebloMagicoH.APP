@@ -8,12 +8,12 @@ namespace PuebloMagicoH.Movil.GUI.Viws.Models
     public class MediaModel
     {
         public Guid MediaId { get; set; }
-        public string path { get; set; }
+        public string Path { get; set; }
         public DateTime LocalDateTime { get; set; }
-        private FileImageSource sourcer = null;
-        public FileImageSource Source => sourcer ?? (sourcer = new FileImageSource()
+        private FileImageSource source = null;
+        public FileImageSource Source => source ?? (source = new FileImageSource()
         {
-            File = path
+            File = Path
         });
     }
 }

@@ -22,79 +22,80 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 			InitializeComponent ();
 		}
 
-        private async void BtnTomarFoto_Clicked(object sender, EventArgs e)
-        {
-            await CrossMedia.Current.Initialize();
-
-            if(!CrossMedia.Current.IsTakePhotoSupported && !CrossMedia.Current.IsPickPhotoSupported)
-            {
-                await DisplayAlert("Message", "Photo capture and pick not supported", "ok");
-                return;
-            }
-            else
-            {
-                var newPhotoId = Guid.NewGuid();
-                var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
-                {
-                    Name = newPhotoId.ToString(),
-                    SaveToAlbum = true,
-                    DefaultCamera = CameraDevice.Rear,
-                    Directory = "Demo"
-                });
-                if(file == null)
-                {
-                    return;
-                }
-
-                await DisplayAlert("File path", file.Path, "ok");
-
-                MyImage.Source = ImageSource.FromStream(() =>
-                  {
-                      var stream = file.GetStream();
-                      return stream;
-                  });
-            }
-        }
-
-        //private async void BtnTomarFoto_Pressed(object sender, EventArgs e)
+        //private async void BtnTomarFoto_Clicked(object sender, EventArgs e)
         //{
-        //    var IsInitiliaze = await CrossMedia.Current.Initialize();
-        //    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported || !CrossMedia.IsSupported || !IsInitiliaze)
+        //    await CrossMedia.Current.Initialize();
+
+        //    if(!CrossMedia.Current.IsTakePhotoSupported && !CrossMedia.Current.IsPickPhotoSupported)
         //    {
-        //        await DisplayAlert("Error", "La camara no se encuentra disponible", "ok");
+        //        await DisplayAlert("Message", "Photo capture and pick not supported", "ok");
         //        return;
         //    }
-
-        //    var newPhotoId = Guid.NewGuid();
-
-        //    using (var potho = await CrossMedia.Current.TakePhotoAsync(new StoreVideoOptions()
+        //    else
         //    {
-        //        Name = newPhotoId.ToString(),
-        //        SaveToAlbum = true,
-        //        DefaultCamera = CameraDevice.Rear,
-        //        Directory = "Demo"
-        //    }))
-        //    {
-        //        if (string.IsNullOrWhiteSpace(potho?.Path))
+        //        var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+        //        {
+        //            Directory="Demo Camara",
+        //            Name=DateTime.Now+"_test.jpg"
+        //        });
+        //        if(file == null)
         //        {
         //            return;
         //        }
 
-        //        var newPhotoMedia = new MediaModel()
-        //        {
-        //            MediaId = newPhotoId,
-        //            path = potho.Path,
-        //            LocalDateTime = DateTime.Now
-        //        };
+        //        await DisplayAlert("File path", file.Path, "ok");
 
-        //        Photos.Add(newPhotoMedia);
-
-
-        //        potho.Dispose();
-
-
+        //        MyImage.Source = ImageSource.FromStream(() =>
+        //          {
+        //              var stream = file.GetStream();
+        //              return stream;
+        //          });
         //    }
-
         //}
+
+        private async void BtnTomarFoto_Pressed(object sender, EventArgs e)
+        {
+            var IsInitiliaze = await CrossMedia.Current.Initialize();
+
+            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported || !CrossMedia.IsSupported || !IsInitiliaze)
+            {
+                await DisplayAlert("Error", "La camara no se encuentra disponible", "ok");
+                return;
+            }
+
+            var newPhotoId = Guid.NewGuid();
+
+            using (var potho = await CrossMedia.Current.TakePhotoAsync(new StoreVideoOptions()
+            {
+                Name = newPhotoId.ToString(),
+                SaveToAlbum = true,
+                DefaultCamera = CameraDevice.Rear,
+                Directory = "Demo",
+                CustomPhotoSize=50
+            }))
+            {
+                if (string.IsNullOrWhiteSpace(potho?.Path))
+                {
+                    return;
+                }
+
+                var newPhotoMedia = new MediaModel()
+                {
+                    MediaId = newPhotoId,
+                    Path = potho.Path,
+                    LocalDateTime = DateTime.Now
+                };
+
+                Photos.Add(newPhotoMedia);
+
+
+                potho.Dispose();
+
+
+            }
+            
+            ListPhotos.ItemsSource = Photos;
+
+        }
     }
 }

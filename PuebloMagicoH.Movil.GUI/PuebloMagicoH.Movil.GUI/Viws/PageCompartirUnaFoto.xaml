@@ -6,9 +6,23 @@
         <ScrollView>
 
             <StackLayout>
-                <Button Text="Capturar" x:Name="btnTomarFoto" Clicked="BtnTomarFoto_Clicked"></Button>
-                <Image x:Name="MyImage" HeightRequest="3000" WidthRequest="300"/>
+
+                <Button Text="Capturar" x:Name="btnTomarFoto" Pressed="BtnTomarFoto_Pressed"></Button>
+
+                <ListView x:Name="ListPhotos">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Image Source="{Binding Source}" Aspect="AspectFit" Margin="5">
+                                    
+                                </Image>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
             </StackLayout>
+            
             
         </ScrollView>
     </ContentPage.Content>

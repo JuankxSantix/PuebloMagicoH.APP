@@ -35,7 +35,7 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="VerMapa.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="VerMapa.png" Style="{StaticResource btnImagen}" ></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Ver mapa de ubicacion"></Label>
                 </StackLayout>
 
@@ -45,27 +45,27 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="DondeComer.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="DondeComer.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnDondeComer" Pressed="ImgBtnDondeComer_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Donde comer"></Label>
                 </StackLayout>
 
                 <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="DirectorioDeBailniarios.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="DirectorioDeBailniarios.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnDireccionDeBalnearios" Pressed="ImgBtnDireccionDeBalnearios_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Directorio de balnearios"></Label>
                 </StackLayout>
 
                 <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="TurismoReligioso.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="TurismoReligioso.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnTurismoReligioso" Pressed="ImgBtnTurismoReligioso_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Turismo religioso"></Label>
                 </StackLayout>
 
                 <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical" VerticalOptions="Center" >
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="SeguridadPublica1.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="SeguridadPublica1.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnSeguridadPublica" Pressed="ImgBtnSeguridadPublica_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Seguridad publica"></Label> 
                 </StackLayout>
 
                 <StackLayout Grid.Row="3" Grid.Column="0" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="ServiciosDeEmergencia.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="ServiciosDeEmergencia.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnServiciosDeEmergencia" Pressed="ImgBtnServiciosDeEmergencia_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Servicios de emergencia"></Label>
                 </StackLayout>
 
@@ -75,32 +75,32 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="3" Grid.Column="2" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="ContactaConUnGuiaTurustico.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="ContactaConUnGuiaTurustico.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnContactaConUnGuiaTuristico" Pressed="ImgBtnContactaConUnGuiaTuristico_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Contacta con un guia turistico"></Label>
                 </StackLayout>
 
                 <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="AtractivosTuristicos1.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="AtractivosTuristicos1.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnAtractivosTuristicos" Pressed="ImgBtnAtractivosTuristicos_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Atractivos Turisticos"></Label>
                 </StackLayout>
 
                 <StackLayout Grid.Row="4" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="Monumentos1.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="Monumentos1.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnMonumentos" Pressed="ImgBtnMonumentos_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Monumentos"></Label>
                 </StackLayout>
 
                 <StackLayout Grid.Row="4" Grid.Column="2" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="LeerCodigoQR.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="LeerCodigoQR.png" Style="{StaticResource btnImagen}" ></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Leer Código QR"></Label>
                 </StackLayout>
 
                 <StackLayout Grid.Row="5" Grid.Column="0" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="Promociones1.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="Promociones1.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnPromociones" Pressed="ImgBtnPromociones_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Promociones"></Label>
                 </StackLayout>
 
                 <StackLayout Grid.Row="5" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="AyudanosAMEjorar.png" Style="{StaticResource btnImagen}"></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="AyudanosAMEjorar.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnAyudanosAMejorar" Pressed="ImgBtnAyudanosAMejorar_Pressed"></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Ayudanos a mejorar"></Label>
                 </StackLayout>
 
