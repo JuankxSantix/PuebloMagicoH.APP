@@ -31,3 +31,4 @@ namespace PuebloMagicoH.Movil.GUI
         }
     }
 }
+ 
