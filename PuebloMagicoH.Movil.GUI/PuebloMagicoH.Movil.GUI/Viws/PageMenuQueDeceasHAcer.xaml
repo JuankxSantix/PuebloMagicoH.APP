@@ -71,7 +71,7 @@
 
                 <StackLayout Grid.Row="3" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center">
                     <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="ComparteUnaFotografia.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnCompartitFotografia" Clicked="ImgBtnCompartitFotografia_Clicked"></ImageButton>
-                    <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Comparte una fotografica"></Label>
+                    <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Comparte una fotografia"></Label>
                 </StackLayout>
 
                 <StackLayout Grid.Row="3" Grid.Column="2" Orientation="Vertical" VerticalOptions="Center">
@@ -90,7 +90,7 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="4" Grid.Column="2" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="LeerCodigoQR.png" Style="{StaticResource btnImagen}" ></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="LeerCodigoQR.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnLeerCodigoQr" Pressed="ImgBtnLeerCodigoQr_Pressed" ></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Leer Código QR"></Label>
                 </StackLayout>
 

@@ -34,7 +34,7 @@
 
                 <Label Text="Deceas incluir una fotos (opcional)" Grid.Row="3" HorizontalOptions="Start"/>
                 <Frame BorderColor="Black" Grid.Row="4">
-                    <Image x:Name="SouceDeImagen" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Image x:Name="ImagenTomada" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 </Frame>
                 <StackLayout Grid.Row="5" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
                     <Frame 
@@ -44,8 +44,9 @@
                         BackgroundColor="{StaticResource PrimaryColor}"
                         HasShadow="True"
                         HorizontalOptions="Center"
-                        IsClippedToBounds="True"/>
-                    <Button Text="Tomar Foto" Style="{StaticResource butttonNormal}"/>
+                        IsClippedToBounds="True">
+                        <Button Text="Tomar Foto" x:Name="BtnTomarFoto" Clicked="BtnTomarFoto_Clicked" Style="{StaticResource butttonNormal}"/>
+                    </Frame>
                     <Frame 
                         Grid.Row="8"
                         Padding="0,0,0,-1"
@@ -53,8 +54,9 @@
                         BackgroundColor="{StaticResource PrimaryColor}"
                         HasShadow="True"
                         HorizontalOptions="Center"
-                        IsClippedToBounds="True"/>
-                    <Button Text="Guardar" Style="{StaticResource butttonNormal}"/>
+                        IsClippedToBounds="True">
+                        <Button Text="Guardar" Style="{StaticResource butttonNormal}"/>
+                    </Frame>
                 </StackLayout>
             </Grid>
         </ScrollView>

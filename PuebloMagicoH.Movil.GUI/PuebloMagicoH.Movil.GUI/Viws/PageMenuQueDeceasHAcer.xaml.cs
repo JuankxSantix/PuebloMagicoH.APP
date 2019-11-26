@@ -96,5 +96,10 @@ namespace PuebloMagicoH.Movil.GUI.Viws
         {
             Navigation.PushAsync(new PageAyudanosAMejorar());
         }
+
+        private void ImgBtnLeerCodigoQr_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageLeerCodigoQR());
+        }
     }
 }

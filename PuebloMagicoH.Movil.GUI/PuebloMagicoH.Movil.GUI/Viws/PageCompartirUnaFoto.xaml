@@ -1,17 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PuebloMagicoH.Movil.GUI.Viws.PageCompartirUnaFoto">
+             x:Class="PuebloMagicoH.Movil.GUI.Viws.PageCompartirUnaFoto" Title="Comparte una fotografia">
     <ContentPage.Content>
         <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Frame 
+                    Margin="10"
+                        Grid.Row="0"
+                        Padding="0,0,0,-1"
+                        CornerRadius="15"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        HasShadow="True"
+                        HorizontalOptions="Center"
+                        IsClippedToBounds="True">
+                    <Button Text="Hacer una foto" x:Name="BtnHacerUnaFoto" Clicked="BtnHacerUnaFoto_Clicked" Style="{StaticResource butttonNormal}" ></Button>
+                </Frame>
+                <StackLayout Grid.Row="1" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
 
-            <StackLayout>
+                    <!--<Button Text="Seleccionar una imagen" x:Name="btnSeleccionarUnaImagen" Clicked="BtnSeleccionarUnaImagen_Clicked"></Button>-->
+                    <Image x:Name="MiImagen" Margin="10" HorizontalOptions="Center" VerticalOptions="Center"></Image>
 
-                <Image x:Name="MiImagen"></Image>
-                <Button Text="Hacer una foto" x:Name="BtnHacerUnaFoto" Clicked="BtnHacerUnaFoto_Clicked"></Button>
-                <Button Text="Seleccionar una imagen" x:Name="btnSeleccionarUnaImagen" Clicked="BtnSeleccionarUnaImagen_Clicked"></Button>
-
-                <!--<ListView x:Name="ListPhotos">
+                    <!--<ListView x:Name="ListPhotos">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -23,7 +37,9 @@
                     </ListView.ItemTemplate>
                 </ListView>-->
 
-            </StackLayout>
+                </StackLayout>
+            </Grid>
+
 
 
         </ScrollView>

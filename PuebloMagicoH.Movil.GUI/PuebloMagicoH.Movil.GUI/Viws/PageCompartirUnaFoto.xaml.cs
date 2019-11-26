@@ -35,6 +35,8 @@ namespace PuebloMagicoH.Movil.GUI.Viws
                 Directory = "Huichapan Pueblo Magico",
                 SaveMetaData = true,
                 AllowCropping = true,
+                PhotoSize= PhotoSize.Full,
+                CustomPhotoSize=100
 
             };
             var foto = await CrossMedia.Current.TakePhotoAsync(opciones_Almacenamiento);
@@ -46,22 +48,22 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             });
         }
 
-        private async void BtnSeleccionarUnaImagen_Clicked(object sender, EventArgs e)
-        {
-            if (CrossMedia.Current.IsTakePhotoSupported)
-            {
-                var imagen = await CrossMedia.Current.PickPhotoAsync();
-                if (imagen != null)
-                {
-                    MiImagen.Source = ImageSource.FromStream(() =>
-                    {
-                        var stream = imagen.GetStream();
-                        imagen.Dispose();
-                        return stream;
-                    });
+        //private async void BtnSeleccionarUnaImagen_Clicked(object sender, EventArgs e)
+        //{
+        //    if (CrossMedia.Current.IsTakePhotoSupported)
+        //    {
+        //        var imagen = await CrossMedia.Current.PickPhotoAsync();
+        //        if (imagen != null)
+        //        {
+        //            MiImagen.Source = ImageSource.FromStream(() =>
+        //            {
+        //                var stream = imagen.GetStream();
+        //                imagen.Dispose();
+        //                return stream;
+        //            });
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
     }
 }
