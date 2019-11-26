@@ -5,5 +5,15 @@
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.READ_INPUT_STATE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<application android:label="PuebloMagicoH.Movil.GUI.Android"></application>
+	<application android:label="PuebloMagicoH.Movil.GUI.Android">
+    
+<!-- ADD FILE PROVIDER HERE -->
+            <provider android:name="android.support.v4.content.FileProvider"
+                  android:authorities="com.PuebloMagicoH.Movil.GUI.fileprovider"
+                  android:exported="false"
+                  android:grantUriPermissions="true">
+              <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+              android:resource="@xml/file_paths"></meta-data>
+            </provider>
+  </application>
 </manifest>
