@@ -34,12 +34,12 @@ namespace PuebloMagicoH.BIZ
 
         public List<Eventos> EvendoDelDia(DateTime Fecha)
         {
-            return Listar.Where(e => e.FechaInicio >= Fecha || e.FechaFinal <= Fecha).ToList();
+            return Listar.Where(e =>  Fecha>= e.FechaInicio  || Fecha <= e.FechaFinal ).ToList();
         }
 
         public List<Eventos> EventosEntre(DateTime FechaInicio, DateTime FechaFin)
         {
-            return Listar.Where(e => e.FechaInicio == FechaInicio && e.FechaFinal == FechaFin).ToList();
+            return Listar.Where(e => FechaInicio >= e.FechaInicio  && FechaFin <= e.FechaFinal ).ToList();
         }
 
         public bool Modificar(Eventos entidad)

@@ -27,10 +27,11 @@
                     <Label Text="Es una queja:" HorizontalOptions="End" HorizontalTextAlignment="End"/>
                     <Switch HeightRequest="15" VerticalOptions="Center" HorizontalOptions="End" ></Switch>
                 </StackLayout>
-                <Frame BorderColor="Black" Grid.Row="4"/>
-                <Editor Grid.Row="2" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                <Frame BorderColor="Black" Grid.Row="2">
+                    <Entry WidthRequest="400" HeightRequest="500" Margin="5">
 
-                </Editor>
+                    </Entry>
+                </Frame>
 
                 <Label Text="Deceas incluir una fotos (opcional)" Grid.Row="3" HorizontalOptions="Start"/>
                 <Frame BorderColor="Black" Grid.Row="4">

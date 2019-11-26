@@ -5,8 +5,17 @@
     <ContentPage.Content>
         <ScrollView>
 
-            <StackLayout>
-                <Button Text="Escanear Qr" x:Name="BtnEscanearQr" Clicked="BtnEscanearQr_Clicked"></Button>
+            <StackLayout Margin="50">
+                <Frame 
+                        Grid.Row="8"
+                        Padding="0,0,0,-1"
+                        CornerRadius="15"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        HasShadow="True"
+                        HorizontalOptions="Center"
+                        IsClippedToBounds="True">
+                    <Button Text="Escanear Qr" x:Name="BtnEscanearQr" Clicked="BtnEscanearQr_Clicked" Style="{StaticResource butttonNormal}"></Button>
+                </Frame>
             </StackLayout>
 
         </ScrollView>

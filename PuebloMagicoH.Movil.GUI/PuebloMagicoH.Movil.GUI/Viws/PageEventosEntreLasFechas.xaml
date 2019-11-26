@@ -8,31 +8,28 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 
                 <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="15,10">
-                    <!--<Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                    </Grid>-->
+                    
                     <StackLayout Orientation="Horizontal"  Margin="15,0">
                         <Label Text="Del:" VerticalOptions="Center" HorizontalOptions="Start"></Label>
-                        <DatePicker VerticalOptions="Center" HorizontalOptions="EndAndExpand" ></DatePicker>
+                        <DatePicker x:Name="DateInicio" VerticalOptions="Center" HorizontalOptions="EndAndExpand" ></DatePicker>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Margin="15,0">
                         <Label Text="Al:" VerticalOptions="Center" HorizontalOptions="Start"></Label>
-                        <DatePicker VerticalOptions="Center" HorizontalOptions="EndAndExpand"></DatePicker>
+                        <DatePicker x:Name="DateFin" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></DatePicker>
                     </StackLayout>
                     
                 </StackLayout>
-                    
 
-                <Frame BorderColor="Black" Margin="10,5" Grid.Row="1">
+                <Button Text="Buscar" x:Name="BtnBuscar" Clicked="BtnBuscar_Clicked" Grid.Row="1"></Button>
 
-                    <CollectionView Grid.Row="1" x:Name="CollectionDeEventos" >
-                        <!--ItemsSource="{Binding EvendoDelDia}"-->
+                <Frame BorderColor="Black" Margin="10,5" Grid.Row="2">
+
+                    <CollectionView Grid.Row="1" x:Name="CollectionDeEventos" ItemsSource="{Binding EventosEntre}">
+                        
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame BorderColor="Black">
@@ -54,12 +51,12 @@
                                         </Frame>
 
                                         <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextTitulo}" Text="Titulo del evento"/>
+                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextTitulo}" Text="{Binding NombreEvento}"/>
                                         </StackLayout>
 
                                         <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextSubTitulo}" Text="Lugar"/>
-                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextSubTitulo}" Text="Hora"/>
+                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextSubTitulo}" Text="{Binding LugarEvento}"/>
+                                                <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextSubTitulo}" Text="{Binding FechaInicio}"/>
                                         </StackLayout>
 
                                         <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
