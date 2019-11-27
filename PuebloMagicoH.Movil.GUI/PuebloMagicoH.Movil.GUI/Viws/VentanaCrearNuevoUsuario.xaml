@@ -130,7 +130,15 @@
                     <Entry TextColor="Black" FontSize="Small" WidthRequest="250" x:Name="txtRepetirContrasenia"/>
                 </StackLayout>
 
-                <Frame Grid.Row="16" CornerRadius="20" Padding="0">
+                <Frame 
+                    Grid.Row="16"
+                    Padding="0,0,0,-1"
+                    CornerRadius="15"
+                    BackgroundColor="{StaticResource PrimaryColor}"
+                    HasShadow="True"
+                    HorizontalOptions="Center"
+                    IsClippedToBounds="True">
+
                     <Button Text="Guardar" Style="{StaticResource butttonNormal}" HorizontalOptions="FillAndExpand" Margin="60,0" x:Name="btnGuardar" Clicked="BtnGuardar_Clicked"></Button>
                 </Frame>
 
