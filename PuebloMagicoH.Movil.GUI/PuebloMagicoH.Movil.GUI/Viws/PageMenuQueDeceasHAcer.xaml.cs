@@ -101,5 +101,10 @@ namespace PuebloMagicoH.Movil.GUI.Viws
         {
             Navigation.PushAsync(new PageLeerCodigoQR());
         }
+
+        private void ImgBtnGeolocalizador_Pressed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageGeolocalizador());
+        }
     }
 }

@@ -12,6 +12,7 @@ using Plugin.CurrentActivity;
 namespace PuebloMagicoH.Movil.GUI.Droid
 {
     [Activity(Label = "Pueblo Magico H", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override async void OnCreate(Bundle savedInstanceState)
@@ -33,5 +34,6 @@ namespace PuebloMagicoH.Movil.GUI.Droid
         {
             Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }

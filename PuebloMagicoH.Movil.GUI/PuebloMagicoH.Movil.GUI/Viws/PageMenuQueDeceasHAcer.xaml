@@ -35,7 +35,7 @@
                 </StackLayout>
 
                 <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Vertical" VerticalOptions="Center">
-                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="VerMapa.png" Style="{StaticResource btnImagen}" ></ImageButton>
+                    <ImageButton HorizontalOptions="Center" VerticalOptions="Center" Source="VerMapa.png" Style="{StaticResource btnImagen}" x:Name="ImgBtnGeolocalizador" Pressed="ImgBtnGeolocalizador_Pressed" ></ImageButton>
                     <Label VerticalOptions="Center" HorizontalTextAlignment="Center" Text="Ver mapa de ubicacion"></Label>
                 </StackLayout>
 

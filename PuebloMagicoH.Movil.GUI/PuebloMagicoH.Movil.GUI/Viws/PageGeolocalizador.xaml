@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PuebloMagicoH.Movil.GUI.Viws.PageGeolocalizador" Title="Tu ubicacion">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout>
+                <Label Text="Coordenadas"></Label>
+                <Label Text="Latitud"></Label>
+                <Label x:Name="lblLatitud"></Label>
+                <Label Text="Longitut"></Label>
+                <Label x:Name="lblLongitut"></Label>
+                <Label Text="Altura H"></Label>
+                <Label x:Name="lblAltura"></Label>
+                <!--<Label Text="Altura H"></Label>
+                <Label x:Name="lblAltura"></Label>-->
+                
+            </StackLayout>
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
