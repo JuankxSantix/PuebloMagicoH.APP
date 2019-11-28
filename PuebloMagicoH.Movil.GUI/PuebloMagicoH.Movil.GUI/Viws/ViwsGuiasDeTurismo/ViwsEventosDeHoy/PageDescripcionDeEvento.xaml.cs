@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PuebloMagicoH.Movil.GUI.Viws
+namespace PuebloMagicoH.Movil.GUI.Viws.ViwsGuiasDeTurismo.ViwsEventosDeHoy
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Page1 : ContentPage
+	public partial class PageDescripcionDeEvento : ContentPage
 	{
-		public Page1 ()
+		public PageDescripcionDeEvento ()
 		{
 			InitializeComponent ();
 		}

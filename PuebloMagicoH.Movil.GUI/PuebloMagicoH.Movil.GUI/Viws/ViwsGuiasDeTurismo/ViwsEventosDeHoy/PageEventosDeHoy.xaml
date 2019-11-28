@@ -32,8 +32,8 @@
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
 
-                                        <Frame Grid.RowSpan="3" Padding="0" HasShadow="False" IsClippedToBounds="True">
-                                            <Image HeightRequest="50" Source="Previw.png" WidthRequest="50" x:Name="BtnEvento"/>
+                                        <Frame Grid.RowSpan="3" Grid.Row="0" Grid.Column="0">
+                                            <ImageButton Source="Previw.png" x:Name="BtnVerEvento" Clicked="BtnVerEvento_Clicked"/>
                                         </Frame>
 
                                         <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">

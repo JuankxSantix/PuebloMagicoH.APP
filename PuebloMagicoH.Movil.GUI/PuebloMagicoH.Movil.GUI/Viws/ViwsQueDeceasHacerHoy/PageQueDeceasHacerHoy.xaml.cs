@@ -16,6 +16,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 		{
 			InitializeComponent ();
             ElementosAInicializar();
+            
         }
 
         public void ElementosAInicializar()
@@ -44,6 +45,11 @@ namespace PuebloMagicoH.Movil.GUI.Viws
         private void ApartdaoComoTeSietesHoy_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Huichapan Pueblo Magico", "Boton Inabilitado", "ok");
+        }
+
+        private void Stak_Focused(object sender, FocusEventArgs e)
+        {
+            DisplayAlert("Ejemplo", "no se", "ok");
         }
     }
 }

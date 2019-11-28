@@ -2,6 +2,7 @@
 using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
+using PuebloMagicoH.Movil.GUI.Viws.ViwsGuiasDeTurismo.ViwsEventosDeHoy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,5 +26,11 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             CollectionDeEventos.ItemsSource = manejadorDeEventos.EvendoDelDia(DateTime.Now);
             
         }
-	}
+
+        private void BtnVerEvento_Clicked(object sender, EventArgs e)
+        {
+            //if()
+            Navigation.PushAsync(new PageDescripcionDeEvento());
+        }
+    }
 }

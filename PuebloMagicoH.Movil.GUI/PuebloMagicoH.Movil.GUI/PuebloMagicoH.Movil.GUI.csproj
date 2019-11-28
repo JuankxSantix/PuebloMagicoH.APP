@@ -31,70 +31,70 @@
     <EmbeddedResource Update="Viws\AgregarEventos.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\Page1.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageAcercaDe.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageAcercaDe.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageAtractivosTuristicos.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageAtractivosTuristicos.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageAyudanosAMejorar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageAyudanosAMejorar.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageCompartirUnaFoto.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageCompartirUnaFoto.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageContactarConUnGuiaTuristico.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageContactarConUnGuiaTuristico.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageDirectorioComerciantes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageDirectorioComerciantes.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageDirectorioDeBalnearios.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageDirectorioDeBalnearios.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageDondeComer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageDondeComer.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\ViwsEventosDeHoy\PageDescripcionDeEvento.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageEventosDeHoy.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\ViwsEventosDeHoy\PageEventosDeHoy.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageEventosEntreLasFechas.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageEventosEntreLasFechas.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageGeolocalizador.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageGeolocalizador.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageHoteles.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageHoteles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageLeerCodigoQR.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageLeerCodigoQR.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageMenuQueDeceasHAcer.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageMenuQueDeceasHAcer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageMonumentos.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageMonumentos.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PagePromociones.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PagePromociones.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageQueDeceasHacerHoy.xaml">
+    <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\PageQueDeceasHacerHoy.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageSeguridadPublica.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageSeguridadPublica.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageServiciosDeEmergencia.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageServiciosDeEmergencia.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\PageTurismoReligioso.xaml">
+    <EmbeddedResource Update="Viws\ViwsGuiasDeTurismo\PageTurismoReligioso.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\VentanaCrearNuevoUsuario.xaml">
+    <EmbeddedResource Update="Viws\ViwsInicioDeSecionYCrearNuevoUsuario\VentanaCrearNuevoUsuario.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

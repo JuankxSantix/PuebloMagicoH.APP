@@ -15,6 +15,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 		public PageSeguridadPublica ()
 		{
 			InitializeComponent ();
+            
 		}
 	}
 }
