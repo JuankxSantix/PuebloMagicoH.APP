@@ -29,8 +29,14 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 
         private void BtnVerEvento_Clicked(object sender, EventArgs e)
         {
-            //if()
+            Eventos eventos = CollectionDeEventos.SelectedItem as Eventos;
             Navigation.PushAsync(new PageDescripcionDeEvento());
+        }
+
+        private void CollectionDeEventos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Eventos eventos = CollectionDeEventos.SelectedItem as Eventos;
+            DisplayAlert("SeElijio", eventos.NombreEvento, "ok");
         }
     }
 }

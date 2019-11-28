@@ -15,9 +15,9 @@
 
             <Frame BorderColor="Black" Margin="5,5" Grid.Row="1">
                 <ScrollView>
-                    <CollectionView Grid.Row="1" x:Name="CollectionDeEventos" ItemsSource="{Binding Eventos}">
+                    <CollectionView Grid.Row="1" x:Name="CollectionDeEventos" ItemsSource="{Binding Eventos}" SelectionChanged="CollectionDeEventos_SelectionChanged">
 
-                        <CollectionView.ItemTemplate>
+                        <CollectionView.ItemTemplate >
                             <DataTemplate>
                                 <Frame BorderColor="Black">
 

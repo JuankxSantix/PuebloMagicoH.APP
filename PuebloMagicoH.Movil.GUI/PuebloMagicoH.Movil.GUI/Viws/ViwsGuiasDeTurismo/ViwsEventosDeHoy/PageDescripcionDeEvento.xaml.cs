@@ -22,9 +22,9 @@ namespace PuebloMagicoH.Movil.GUI.Viws.ViwsGuiasDeTurismo.ViwsEventosDeHoy
 			InitializeComponent ();
 
             manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
+            //Eventos eventos
 
-
-            Title = "mejorado";
-		}
+            //Title = "Evento: "+eventos.NombreEvento;
+        }
 	}
 }
