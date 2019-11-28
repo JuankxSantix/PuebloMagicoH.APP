@@ -17,15 +17,18 @@ namespace PuebloMagicoH.Movil.GUI.Viws
         IManejadorDeEventos manejadorDeEventos;
         IManejadorDeComercios manejadorDeComercios;
         IManejadorDeMonumentos manejadorDeMonumentos;
+        IManejadorDeHoteles manejadorDeHoteles;
         Eventos eventos;
         Comercio comercio;
         Monumentos monumento;
+        Hoteles hoteles;
         public AgregarEventos ()
 		{
 			InitializeComponent ();
             manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
             manejadorDeComercios = new ManejadorComercios(new RepositorioGenerico<Comercio>());
             manejadorDeMonumentos = new ManejadorMonumentos(new RepositorioGenerico<Monumentos>());
+            manejadorDeHoteles = new ManejadorDeHoteles(new RepositorioGenerico<Hoteles>());
         }
 
         private void Agregar_Clicked(object sender, EventArgs e)
@@ -52,13 +55,21 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             //    Direccion = txtDireccion.Text
             //};
 
-            monumento = new Monumentos()
+            //monumento = new Monumentos()
+            //{
+            //    Descripcion = txtdescriociono.Text,
+            //    Direccion = txtDireccion.Text,
+            //    NombreMonumentos = txtnombre.Text
+            //};
+            hoteles = new Hoteles()
             {
                 Descripcion = txtdescriociono.Text,
                 Direccion = txtDireccion.Text,
-                NombreMonumentos = txtnombre.Text
+                HabitacionesDisponibles = int.Parse(txtHabitaciones.Text),
+                NombreHotel = txtnombre.Text
             };
-            if (manejadorDeMonumentos.AGREGAR(monumento))
+
+            if (manejadorDeHoteles.AGREGAR(hoteles))
                 DisplayAlert("Correcto", "SeAgrego correctamente", "ok");
             else
                 DisplayAlert("Correcto", "No se agrego", "ok");
