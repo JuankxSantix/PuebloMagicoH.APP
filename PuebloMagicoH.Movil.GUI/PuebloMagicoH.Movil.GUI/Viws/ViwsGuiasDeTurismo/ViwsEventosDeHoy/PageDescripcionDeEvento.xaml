@@ -4,7 +4,51 @@
              x:Class="PuebloMagicoH.Movil.GUI.Viws.ViwsGuiasDeTurismo.ViwsEventosDeHoy.PageDescripcionDeEvento">
     <ContentPage.Content>
         <ScrollView>
-            <Label Text="Hola mundo"></Label>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="PreviuwDeDescripcionDeEventos.png"></Image>
+                <StackLayout Grid.Row="1" Orientation="Horizontal">
+                    <Label x:Name="lblNombreDeEvento" HorizontalOptions="Start" Style="{StaticResource TextTitulo}"/>
+                    <StackLayout HorizontalOptions="End" Orientation="Horizontal">
+                        <Image HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                        <Image HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                        <Image HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                        <Image HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                        <Image HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Orientation="Horizontal">
+                    <Label x:Name="lblDireccion" FontSize="Medium" Style="{StaticResource TextNormal}"></Label>
+                    <Label x:Name="lblFecha" FontSize="Medium" Style="{StaticResource TextNormal}"></Label>
+                    <Label x:Name="lblHora" FontSize="Medium" Style="{StaticResource TextNormal}"></Label>
+                </StackLayout>
+                <StackLayout Grid.Row="3">
+                    <ScrollView>
+                        <Label x:Name="lblDescripcion" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Style="{StaticResource TextNormal}"/>
+                    </ScrollView>
+                </StackLayout>
+                <Frame 
+                    HorizontalOptions="End"
+                    Margin="15,20"
+            Grid.Row="4"
+            Padding="0,0,0,-1"
+            CornerRadius="15"
+            BackgroundColor="{StaticResource PrimaryColor}"
+            HasShadow="True"
+            IsClippedToBounds="True">
+
+                    <Button Margin="20,0" Style="{StaticResource butttonNormal}" BackgroundColor="Transparent" Text="Agregar un comentaro" />
+                </Frame>
+
+
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
