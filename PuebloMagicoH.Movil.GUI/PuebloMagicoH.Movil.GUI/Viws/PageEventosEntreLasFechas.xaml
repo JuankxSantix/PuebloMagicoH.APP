@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PuebloMagicoH.Movil.GUI.Viws.PageEventosEntreLasFechas" Title="Calendario de eventos">
     <ContentPage.Content>
-        <ScrollView>
+        <!--<ScrollView>-->
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
@@ -23,18 +23,27 @@
                     </StackLayout>
                     
                 </StackLayout>
+            <Frame
+            Grid.Row="1" 
+            Padding="0,0,0,-1"
+            CornerRadius="15"
+            BackgroundColor="{StaticResource PrimaryColor}"
+            HasShadow="True"
+            HorizontalOptions="Center"
+            IsClippedToBounds="True">
 
-                <Button Text="Buscar" x:Name="BtnBuscar" Clicked="BtnBuscar_Clicked" Grid.Row="1"></Button>
+                <Button Text="Buscar" x:Name="BtnBuscar" Clicked="BtnBuscar_Clicked" Style="{StaticResource butttonNormal}"></Button>
+            </Frame>
 
-                <Frame BorderColor="Black" Margin="10,5" Grid.Row="2">
-
-                    <CollectionView Grid.Row="1" x:Name="CollectionDeEventos" ItemsSource="{Binding EventosEntre}">
+            <Frame BorderColor="Black" Margin="10,5" Grid.Row="2">
+                <ScrollView>
+                <CollectionView Grid.Row="2" x:Name="CollectionDeEventos" ItemsSource="{Binding EventosEntre}">
                         
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame BorderColor="Black">
 
-                                    <Grid Padding="15,10,15,0" Margin="10,10">
+                                    <Grid >
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />
                                             <ColumnDefinition Width="*" />
@@ -46,8 +55,7 @@
                                         </Grid.RowDefinitions>
 
                                         <Frame Grid.RowSpan="3" Margin="20" Padding="0" HasShadow="False" IsClippedToBounds="True">
-                                            <Image HeightRequest="40" Source="GuiaDeTurismo.png" WidthRequest="40" />
-                                            <!--Grid.RowSpan="3"-->
+                                            <Image HeightRequest="50" Source="Previw.png" WidthRequest="50" />
                                         </Frame>
 
                                         <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
@@ -68,11 +76,11 @@
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-
-                </Frame>
+                </ScrollView>
+            </Frame>
 
             </Grid>
-        </ScrollView>
+        <!--</ScrollView>-->
 
     </ContentPage.Content>
 </ContentPage>

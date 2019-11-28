@@ -32,7 +32,8 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 
         private void ApartadoExploracionLibre_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Huichapan Pueblo Magico", "Boton Inabilitado", "ok");
+            //DisplayAlert("Huichapan Pueblo Magico", "Boton Inabilitado", "ok");
+            Navigation.PushAsync(new AgregarEventos());
         }
 
         private void ApartadoGuiaDeTurismo_Clicked(object sender, EventArgs e)

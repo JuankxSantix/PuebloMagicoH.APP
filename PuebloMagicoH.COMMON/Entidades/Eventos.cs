@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PuebloMagicoH.COMMON.Entidades
 {
-    public class Eventos:BaseDTO
+    public class Eventos:ClassIntermediaDto
     {
         public string LugarEvento { get; set; }
         public string NombreEvento { get; set; }
@@ -12,5 +12,6 @@ namespace PuebloMagicoH.COMMON.Entidades
         public DateTime FechaFinal { get; set; }
         public float Costo { get; set; }
         public int IDLugar { get; set; }
+        //public byte[] Fotografia { get; set; }
     }
 }

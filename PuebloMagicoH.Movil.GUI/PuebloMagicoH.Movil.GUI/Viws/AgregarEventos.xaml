@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PuebloMagicoH.Movil.GUI.Viws.AgregarEventos">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="15,10">
+
+                    <StackLayout Orientation="Horizontal"  Margin="15,0">
+                        <Label Text="Del:" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+                        <DatePicker x:Name="DateInicio" VerticalOptions="Center" HorizontalOptions="EndAndExpand" ></DatePicker>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="15,0">
+                        <Label Text="Al:" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+                        <DatePicker x:Name="DateFin" VerticalOptions="Center" HorizontalOptions="EndAndExpand"></DatePicker>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="1" >
+                    <Label Text="Lugar de Evento"></Label>
+                    <Entry WidthRequest="200" x:Name="txtLugarEvento"></Entry>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="2" >
+                    <Label Text="Nombre de Evento"></Label>
+                    <Entry WidthRequest="200" x:Name="txtNombreEvento"></Entry>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="3" >
+                    <Label Text="Costo"></Label>
+                    <Entry WidthRequest="200" x:Name="txtCosto"></Entry>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="4" >
+                    <Label Text="Notas"></Label>
+                    <Entry WidthRequest="200" x:Name="txtNotasEvento"></Entry>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="5" >
+                    <Label Text="Descripcion"></Label>
+                    <Entry WidthRequest="200" x:Name="txtdescriocionEvento"></Entry>
+                </StackLayout>
+
+                <Button Text="Seleccionar una imagen" x:Name="btnSeleccionarUnaImagen" Clicked="BtnSeleccionarUnaImagen_Clicked" Grid.Row="6"></Button>
+                <Image x:Name="MiImagen" Margin="10" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="7"></Image>
+
+
+                <Button Text="Buscar" x:Name="Agregar" Clicked="Agregar_Clicked" Grid.Row="8"></Button>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

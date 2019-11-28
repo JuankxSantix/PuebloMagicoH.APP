@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PuebloMagicoH.COMMON.Entidades
 {
-    public class Monumentos:BaseDTO
+    public class Monumentos:ClassIntermediaDto
     {
         public string NombreMonumentos { get; set; }
         public string Direccion { get; set; }
