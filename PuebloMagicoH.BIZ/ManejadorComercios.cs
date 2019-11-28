@@ -17,6 +17,8 @@ namespace PuebloMagicoH.BIZ
         }
         public List<Comercio> Listar => repositorio.Read;
 
+        public List<Comercio> ListarPCategoria => repositorio.Read.Where(e => e.CategoriaEstablecimiento != "").ToList();
+
         public bool AGREGAR(Comercio entidad)
         {
             return repositorio.Create(entidad);

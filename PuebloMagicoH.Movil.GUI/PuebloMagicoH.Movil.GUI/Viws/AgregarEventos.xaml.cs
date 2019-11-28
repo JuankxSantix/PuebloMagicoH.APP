@@ -15,29 +15,50 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 	public partial class AgregarEventos : ContentPage
 	{
         IManejadorDeEventos manejadorDeEventos;
+        IManejadorDeComercios manejadorDeComercios;
+        IManejadorDeMonumentos manejadorDeMonumentos;
         Eventos eventos;
+        Comercio comercio;
+        Monumentos monumento;
         public AgregarEventos ()
 		{
 			InitializeComponent ();
             manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
+            manejadorDeComercios = new ManejadorComercios(new RepositorioGenerico<Comercio>());
+            manejadorDeMonumentos = new ManejadorMonumentos(new RepositorioGenerico<Monumentos>());
         }
 
         private void Agregar_Clicked(object sender, EventArgs e)
         {
-            eventos = new Eventos()
+            //eventos = new Eventos()
+            //{
+            //    Costo = float.Parse(txtCosto.Text),
+            //    Descripcion = txtdescriocionEvento.Text,
+            //    FechaInicio = DateInicio.Date,
+            //    FechaFinal = DateFin.Date,
+            //    FechaYHora = null,
+            //    LugarEvento = txtLugarEvento.Text,
+            //    NombreEvento = txtNombreEvento.Text,
+            //    Notas = txtNotasEvento.Text,
+
+            //};
+
+            //comercio = new Comercio()
+            //{
+            //    CategoriaEstablecimiento = txtCategoria.Text,
+            //    Descripcion = txtdescriocion.Text,
+            //    NombreComercio = txtnombre.Text,
+            //    Telefonos = txttelefono.Text,
+            //    Direccion = txtDireccion.Text
+            //};
+
+            monumento = new Monumentos()
             {
-                Costo = float.Parse(txtCosto.Text),
-                Descripcion = txtdescriocionEvento.Text,
-                FechaInicio = DateInicio.Date,
-                FechaFinal = DateFin.Date,
-                FechaYHora = null,
-                LugarEvento = txtLugarEvento.Text,
-                NombreEvento = txtNombreEvento.Text,
-                Notas = txtNotasEvento.Text,
-
+                Descripcion = txtdescriociono.Text,
+                Direccion = txtDireccion.Text,
+                NombreMonumentos = txtnombre.Text
             };
-
-            if (manejadorDeEventos.AGREGAR(eventos))
+            if (manejadorDeMonumentos.AGREGAR(monumento))
                 DisplayAlert("Correcto", "SeAgrego correctamente", "ok");
             else
                 DisplayAlert("Correcto", "No se agrego", "ok");

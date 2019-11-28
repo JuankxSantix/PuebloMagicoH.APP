@@ -7,5 +7,6 @@ namespace PuebloMagicoH.COMMON.Interfaces
 {
     public interface IManejadorDeComercios:IManejadorGenerico<Comercio>
     {
+        List<Comercio> ListarPCategoria { get; }
     }
 }

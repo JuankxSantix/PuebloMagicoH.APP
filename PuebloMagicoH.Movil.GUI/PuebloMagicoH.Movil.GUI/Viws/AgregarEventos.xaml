@@ -30,25 +30,25 @@
                     </StackLayout>
 
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" Grid.Row="1" >
-                    <Label Text="Lugar de Evento"></Label>
-                    <Entry WidthRequest="200" x:Name="txtLugarEvento"></Entry>
-                </StackLayout>
+                <!--<StackLayout Orientation="Horizontal" Grid.Row="1" >
+                    <Label Text="categoria"></Label>
+                    <Entry WidthRequest="200" x:Name="txtCategoria"></Entry>
+                </StackLayout>-->
                 <StackLayout Orientation="Horizontal" Grid.Row="2" >
-                    <Label Text="Nombre de Evento"></Label>
-                    <Entry WidthRequest="200" x:Name="txtNombreEvento"></Entry>
+                    <Label Text="Nombre "></Label>
+                    <Entry WidthRequest="200" x:Name="txtnombre"></Entry>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Grid.Row="3" >
-                    <Label Text="Costo"></Label>
-                    <Entry WidthRequest="200" x:Name="txtCosto"></Entry>
+                    <Label Text="Direccion"></Label>
+                    <Entry WidthRequest="200" x:Name="txtDireccion"></Entry>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" Grid.Row="4" >
-                    <Label Text="Notas"></Label>
-                    <Entry WidthRequest="200" x:Name="txtNotasEvento"></Entry>
-                </StackLayout>
+                <!--<StackLayout Orientation="Horizontal" Grid.Row="4" >
+                    <Label Text="Telefono"></Label>
+                    <Entry WidthRequest="200" x:Name="txttelefono"></Entry>
+                </StackLayout>-->
                 <StackLayout Orientation="Horizontal" Grid.Row="5" >
                     <Label Text="Descripcion"></Label>
-                    <Entry WidthRequest="200" x:Name="txtdescriocionEvento"></Entry>
+                    <Entry WidthRequest="200" x:Name="txtdescriociono"></Entry>
                 </StackLayout>
 
                 <Button Text="Seleccionar una imagen" x:Name="btnSeleccionarUnaImagen" Clicked="BtnSeleccionarUnaImagen_Clicked" Grid.Row="6"></Button>
