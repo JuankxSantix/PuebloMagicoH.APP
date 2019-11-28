@@ -42,10 +42,10 @@
                     <Label Text="Direccion"></Label>
                     <Entry WidthRequest="200" x:Name="txtDireccion"></Entry>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" Grid.Row="4" >
+                <!--<StackLayout Orientation="Horizontal" Grid.Row="4" >
                     <Label Text="Habitaciones"></Label>
                     <Entry WidthRequest="200" x:Name="txtHabitaciones"></Entry>
-                </StackLayout>
+                </StackLayout>-->
                 <StackLayout Orientation="Horizontal" Grid.Row="5" >
                     <Label Text="Descripcion"></Label>
                     <Entry WidthRequest="200" x:Name="txtdescriociono"></Entry>

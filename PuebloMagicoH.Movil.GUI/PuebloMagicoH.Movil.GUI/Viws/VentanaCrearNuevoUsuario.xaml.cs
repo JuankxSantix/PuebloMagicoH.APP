@@ -39,6 +39,8 @@ namespace PuebloMagicoH.Movil.GUI
 
         public void ElementosInicalizar()
         {
+
+            lblErrorDeEmail.IsVisible = false;
             genero = new List<string>() {
 
                 "Masculino",
@@ -139,6 +141,30 @@ namespace PuebloMagicoH.Movil.GUI
                 DisplayAlert("Huichapan Pueblo Magico", "Error\nDatos Incompletos", "Aceptar","Canselar");
             }
 
+        }
+
+            int intentos = 0;
+        private void TxtEMail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string x = e.NewTextValue;
+            foreach (var item in x)
+            {
+                if (item != '@' && intentos==0)
+                {
+                    lblErrorDeEmail.IsVisible = true;
+
+                }
+                else
+                {
+                    intentos++;
+                    if(intentos != 0)
+                    {
+                    lblErrorDeEmail.IsVisible = false;
+                    }
+
+                }
+
+            }
         }
     }
     

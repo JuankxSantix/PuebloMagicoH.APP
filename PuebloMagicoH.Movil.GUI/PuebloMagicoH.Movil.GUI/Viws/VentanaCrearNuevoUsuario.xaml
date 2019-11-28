@@ -35,7 +35,11 @@
                 <Entry Margin="15,0" TextColor="Black" FontSize="Small" HorizontalTextAlignment="Center" Grid.Row="2" x:Name="txtNombre"/>
 
                 <Label HorizontalOptions="FillAndExpand" Grid.Row="3" Style="{StaticResource TextNormal}" Text="E-mail:"/>
-                <Entry Margin="15,0" TextColor="Black" FontSize="Small" HorizontalTextAlignment="Center" Grid.Row="4" x:Name="txtEMail"/>
+                <StackLayout Margin="15,0" Orientation="Vertical" Grid.Row="4" >
+                    
+                <Entry TextColor="Black" FontSize="Small" HorizontalTextAlignment="Center" x:Name="txtEMail" TextChanged="TxtEMail_TextChanged" Keyboard="Email"/>
+                <Label HorizontalOptions="Start" Text="Tu Correo no es correcto" TextColor="Red" x:Name="lblErrorDeEmail"></Label>
+                </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Grid.Row="5" HorizontalOptions="CenterAndExpand">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">

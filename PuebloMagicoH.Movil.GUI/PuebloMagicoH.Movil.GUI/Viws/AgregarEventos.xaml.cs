@@ -14,21 +14,31 @@ namespace PuebloMagicoH.Movil.GUI.Viws
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AgregarEventos : ContentPage
 	{
-        IManejadorDeEventos manejadorDeEventos;
-        IManejadorDeComercios manejadorDeComercios;
-        IManejadorDeMonumentos manejadorDeMonumentos;
-        IManejadorDeHoteles manejadorDeHoteles;
-        Eventos eventos;
-        Comercio comercio;
-        Monumentos monumento;
-        Hoteles hoteles;
+        //IManejadorDeEventos manejadorDeEventos;
+        //IManejadorDeComercios manejadorDeComercios;
+        //IManejadorDeMonumentos manejadorDeMonumentos;
+        //IManejadorDeHoteles manejadorDeHoteles;
+        IManejadorDeBalnearios manejadorDeBalnearios;
+        IManejadorDeAtractivosTuristicos manejadorDeAtractivosTuristicos;
+
+
+
+
+        //Eventos eventos;
+        //Comercio comercio;
+        //Monumentos monumento;
+        //Hoteles hoteles;
+        //Balnearios balnearios;
+        AtractivosTuristicos atractivosTuristicos;
         public AgregarEventos ()
 		{
 			InitializeComponent ();
-            manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
-            manejadorDeComercios = new ManejadorComercios(new RepositorioGenerico<Comercio>());
-            manejadorDeMonumentos = new ManejadorMonumentos(new RepositorioGenerico<Monumentos>());
-            manejadorDeHoteles = new ManejadorDeHoteles(new RepositorioGenerico<Hoteles>());
+            //manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
+            //manejadorDeComercios = new ManejadorComercios(new RepositorioGenerico<Comercio>());
+            //manejadorDeMonumentos = new ManejadorMonumentos(new RepositorioGenerico<Monumentos>());
+            //manejadorDeHoteles = new ManejadorDeHoteles(new RepositorioGenerico<Hoteles>());
+            //manejadorDeBalnearios = new ManejadorDeBalnearios(new RepositorioGenerico<Balnearios>());
+            manejadorDeAtractivosTuristicos = new ManejadorAtractivosTuristicos(new RepositorioGenerico<AtractivosTuristicos>());
         }
 
         private void Agregar_Clicked(object sender, EventArgs e)
@@ -61,15 +71,29 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             //    Direccion = txtDireccion.Text,
             //    NombreMonumentos = txtnombre.Text
             //};
-            hoteles = new Hoteles()
+            //hoteles = new Hoteles()
+            //{
+            //    Descripcion = txtdescriociono.Text,
+            //    Direccion = txtDireccion.Text,
+            //    HabitacionesDisponibles = int.Parse(txtHabitaciones.Text),
+            //    NombreHotel = txtnombre.Text
+            //};
+
+            //balnearios = new Balnearios()
+            //{
+            //    Descripcion = txtdescriociono.Text,
+            //    Direccion = txtDireccion.Text,
+            //    Nombre = txtnombre.Text
+            //};
+
+            atractivosTuristicos = new AtractivosTuristicos()
             {
                 Descripcion = txtdescriociono.Text,
                 Direccion = txtDireccion.Text,
-                HabitacionesDisponibles = int.Parse(txtHabitaciones.Text),
-                NombreHotel = txtnombre.Text
+                NombreAtractivo = txtnombre.Text
             };
 
-            if (manejadorDeHoteles.AGREGAR(hoteles))
+            if (manejadorDeAtractivosTuristicos.AGREGAR(atractivosTuristicos))
                 DisplayAlert("Correcto", "SeAgrego correctamente", "ok");
             else
                 DisplayAlert("Correcto", "No se agrego", "ok");
