@@ -23,6 +23,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
             lblFecha.Text =DateTime.Now.ToLongDateString();
             CollectionDeEventos.ItemsSource = manejadorDeEventos.EvendoDelDia(DateTime.Now);
+            
         }
 	}
 }
