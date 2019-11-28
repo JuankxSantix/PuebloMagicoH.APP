@@ -11,6 +11,8 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<application android:label="PuebloMagicoH.Movil.GUI.Android">
 		<!-- ADD FILE PROVIDER HERE -->
+    <!--<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="{Aqui el código que obtendremos de Google}" />-->
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY" />
 		<provider android:name="android.support.v4.content.FileProvider" android:authorities="com.companyname.PuebloMagicoH.Movil.GUI.fileprovider" android:exported="false" android:grantUriPermissions="true">
 			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
 		</provider>
