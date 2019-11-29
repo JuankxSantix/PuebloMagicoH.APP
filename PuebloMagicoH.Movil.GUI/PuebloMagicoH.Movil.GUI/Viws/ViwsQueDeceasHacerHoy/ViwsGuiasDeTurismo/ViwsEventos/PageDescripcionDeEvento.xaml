@@ -15,8 +15,8 @@
 
                 <Image Grid.Row="0" Source="PreviuwDeDescripcionDeEventos.png"></Image>
                 <StackLayout Grid.Row="1" Orientation="Horizontal">
-                    <Label x:Name="lblNombreDeEvento" HorizontalOptions="Start" Style="{StaticResource TextTitulo}" Text="das,hbkds,hdcañsjdbclsdc"/>
-                    <StackLayout HorizontalOptions="Fill"  Orientation="Horizontal">
+                    <Label x:Name="lblNombreDeEvento" HorizontalOptions="Start" Style="{StaticResource TextTitulo}" />
+                    <StackLayout HorizontalOptions="EndAndExpand"  Orientation="Horizontal">
                         <Image HorizontalOptions="End" HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
                         <Image HorizontalOptions="End" HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
                         <Image HorizontalOptions="End" HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
@@ -25,13 +25,13 @@
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="2" Orientation="Horizontal">
-                    <Label x:Name="lblDireccion" FontSize="Medium" Style="{StaticResource TextNormal}" Text="quiosco"></Label>
-                    <Label x:Name="lblFecha" FontSize="Medium" Style="{StaticResource TextNormal}" Text="sabado 17 de noviembre"></Label>
-                    <Label x:Name="lblHora" FontSize="Medium" Style="{StaticResource TextNormal}" Text="13:30"></Label>
+                    <Label x:Name="lblDireccion" FontSize="Medium" Style="{StaticResource TextNormal}" ></Label>
+                    <Label x:Name="lblFecha" FontSize="Medium" Style="{StaticResource TextNormal}" ></Label>
+                    <Label x:Name="lblHora" FontSize="Medium" Style="{StaticResource TextNormal}" ></Label>
                 </StackLayout>
                 <StackLayout Grid.Row="3">
                     <ScrollView>
-                        <Label x:Name="lblDescripcion" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Style="{StaticResource TextNormal}" Text="das,hbkds,hdcañsjdbclsdcñdsalnclasdcZMC .sncñS SC A LAN Laf s FFN L DJA LA AN   B a falsfjbasljkdcalsd a jsafasklcladsjcn  "/>
+                        <Label x:Name="lblDescripcion" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Style="{StaticResource TextNormal}" />
                     </ScrollView>
                 </StackLayout>
                 <Frame 

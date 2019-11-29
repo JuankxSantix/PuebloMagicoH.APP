@@ -2,6 +2,7 @@
 using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
+using PuebloMagicoH.Movil.GUI.Viws.ViwsGuiasDeTurismo.ViwsEventosDeHoy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,27 +29,11 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             CollectionDeEventos.ItemsSource = manejadorDeEventos.EventosEntre(DateInicio.Date,DateFin.Date);
         }
 
-        //private void BtnAgregar_Clicked(object sender, EventArgs e)
-        //{
+        private void CollectionDeEventos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Eventos eventos = CollectionDeEventos.SelectedItem as Eventos;
+            Navigation.PushAsync(new PageDescripcionDeEvento(eventos));
+        }
 
-        //    Eventos eventos = new Eventos()
-        //    {
-        //        Costo = 330,
-        //        FechaFinal = DateFin.Date,
-        //        FechaInicio = DateInicio.Date,
-        //        IDLugar = 2213,
-        //        LugarEvento = "San jose atlan",
-        //        NombreEvento = "los niños el alma de la fiesta"
-        //    };
-        //    if (manejadorDeEventos.AGREGAR(eventos))
-        //    {
-        //        DisplayAlert("Operacion", "Se creo Correctamente", "ok");
-        //    }
-        //    else
-        //    {
-        //        DisplayAlert("Operacion", "No Se creo", "ok");
-
-        //    }
-        //}
     }
 }

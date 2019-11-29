@@ -17,14 +17,19 @@ namespace PuebloMagicoH.Movil.GUI.Viws.ViwsGuiasDeTurismo.ViwsEventosDeHoy
 	public partial class PageDescripcionDeEvento : ContentPage
 	{
         IManejadorDeEventos manejadorDeEventos;
-		public PageDescripcionDeEvento ()
+		public PageDescripcionDeEvento (Eventos eventos)
 		{
 			InitializeComponent ();
 
             manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
-            //Eventos eventos
+            
+            Title = "¡"+eventos.NombreEvento+"!";
 
-            //Title = "Evento: "+eventos.NombreEvento;
+            lblNombreDeEvento.Text = eventos.NombreEvento;
+            lblDescripcion.Text = eventos.Descripcion;
+            lblDireccion.Text = eventos.LugarEvento;
+            lblFecha.Text = eventos.FechaInicio.ToLongDateString();
+            lblHora.Text = eventos.FechaInicio.ToShortTimeString();
         }
 	}
 }

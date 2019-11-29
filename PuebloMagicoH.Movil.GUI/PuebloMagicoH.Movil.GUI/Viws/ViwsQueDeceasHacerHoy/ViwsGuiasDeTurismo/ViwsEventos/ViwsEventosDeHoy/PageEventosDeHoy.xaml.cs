@@ -24,19 +24,11 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
             lblFecha.Text =DateTime.Now.ToLongDateString();
             CollectionDeEventos.ItemsSource = manejadorDeEventos.EvendoDelDia(DateTime.Now);
-            
         }
-
-        private void BtnVerEvento_Clicked(object sender, EventArgs e)
-        {
-            Eventos eventos = CollectionDeEventos.SelectedItem as Eventos;
-            Navigation.PushAsync(new PageDescripcionDeEvento());
-        }
-
         private void CollectionDeEventos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Eventos eventos = CollectionDeEventos.SelectedItem as Eventos;
-            DisplayAlert("SeElijio", eventos.NombreEvento, "ok");
+            Navigation.PushAsync(new PageDescripcionDeEvento(eventos));
         }
     }
 }
