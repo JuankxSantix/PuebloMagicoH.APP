@@ -23,6 +23,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             manejadorDeHoteles = new ManejadorDeHoteles(new RepositorioGenerico<Hoteles>());
 
             CollectionDeHoteles.ItemsSource = manejadorDeHoteles.Listar;
+            
         }
 	}
 }

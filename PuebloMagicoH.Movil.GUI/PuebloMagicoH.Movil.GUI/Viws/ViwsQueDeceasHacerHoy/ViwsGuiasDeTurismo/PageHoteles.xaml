@@ -45,11 +45,20 @@
                                                             <ColumnDefinition Width="*"/>
                                                             <ColumnDefinition Width="*"/>
                                                         </Grid.ColumnDefinitions>
-                                                    <Label Grid.Column="0" HorizontalOptions="Start" Style="{StaticResource TextTitulo}" Text="{Binding HabitacionesDisponibles}" VerticalOptions="Center" VerticalTextAlignment="Center" HeightRequest="20" />
+                                                    <Label Grid.Column="0" x:Name="Habitaciones" HorizontalOptions="Start" Style="{StaticResource TextTitulo}" Text="{Binding HabitacionesDisponibles}" VerticalOptions="Center" VerticalTextAlignment="Center" HeightRequest="20" />
                                                     
-                                                    <Frame Grid.Column="1" BorderColor="Black" BackgroundColor="Green" VerticalOptions="Center" HeightRequest="5" WidthRequest="5">
-                                                        <Label x:Name="sasa" BackgroundColor="Green"/>
-                                                    </Frame>
+                                                    <Frame Grid.Column="1" BorderColor="Black" VerticalOptions="Center" HeightRequest="5" WidthRequest="5">
+                                                            <Entry x:Name="sasa" >
+                                                                <Entry.Triggers>
+                                                                    <MultiTrigger TargetType="Entry">
+                                                                        <MultiTrigger.Conditions>
+                                                                            <BindingCondition Binding="{Binding  Habitaciones}" Value="10"/>
+                                                                        </MultiTrigger.Conditions>
+                                                                        <Setter Property="BackgroundColor" Value="Red"/>
+                                                                    </MultiTrigger>
+                                                                </Entry.Triggers>
+                                                            </Entry>
+                                                        </Frame>
                                                     </Grid>
                                                     
                                                 </StackLayout>
@@ -61,6 +70,10 @@
 
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
+                        <!--<CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Horizontal" Span="2" VerticalItemSpacing="5"/>
+
+                        </CollectionView.ItemsLayout>-->
                     </CollectionView>
                 </ScrollView>
 
