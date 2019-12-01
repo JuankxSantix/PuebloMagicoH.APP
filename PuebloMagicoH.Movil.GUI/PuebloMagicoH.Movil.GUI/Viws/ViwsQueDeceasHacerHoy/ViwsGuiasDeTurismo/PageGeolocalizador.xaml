@@ -5,18 +5,7 @@
              x:Class="PuebloMagicoH.Movil.GUI.Viws.PageGeolocalizador" Title="Tu ubicacion">
     <ContentPage.Content>
         <ScrollView>
-                <StackLayout Padding="10" Grid.Row="0">
-                    <Label Text="Name:"></Label>
-                    <Entry x:Name="EntryName"/>
-
-
-
-                    <Button Text="opne Coordinates" x:Name="ButtonOpenCoords" Clicked="ButtonOpenCoords_Clicked"/>
-
-
-                </StackLayout>
-
-
+        
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -25,7 +25,6 @@ namespace PuebloMagicoH.Movil.GUI.Droid
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             await CrossMedia.Current.Initialize();
             CrossCurrentActivity.Current.Activity = this;
-            //Xamarin.FormsMaps.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
