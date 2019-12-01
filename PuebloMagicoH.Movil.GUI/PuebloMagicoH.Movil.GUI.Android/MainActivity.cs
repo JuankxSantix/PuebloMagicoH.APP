@@ -25,13 +25,18 @@ namespace PuebloMagicoH.Movil.GUI.Droid
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             await CrossMedia.Current.Initialize();
             CrossCurrentActivity.Current.Activity = this;
-            Xamarin.FormsMaps.Init(this, savedInstanceState);
+            //Xamarin.FormsMaps.Init(this, savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
         {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
             Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 

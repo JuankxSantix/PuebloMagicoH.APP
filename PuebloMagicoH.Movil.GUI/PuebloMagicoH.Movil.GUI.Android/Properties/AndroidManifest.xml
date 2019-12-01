@@ -9,6 +9,9 @@
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-feature android:name="android.hardware.location" android:required="false" />
+  <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+  <uses-feature android:name="android.hardware.location.network" android:required="false" />
 	<application android:label="PuebloMagicoH.Movil.GUI.Android">
 		<!-- ADD FILE PROVIDER HERE -->
     <!--<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="{Aqui el código que obtendremos de Google}" />-->
