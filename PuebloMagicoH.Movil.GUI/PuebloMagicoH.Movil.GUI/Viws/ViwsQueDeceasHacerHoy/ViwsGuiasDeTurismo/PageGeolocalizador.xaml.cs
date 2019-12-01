@@ -28,10 +28,10 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 		public PageGeolocalizador ()
 		{
 			InitializeComponent ();
-            juan();
+            InitializeMap();
         }
 
-        public async void juan()
+        public async void InitializeMap()
         {
             var request = new GeolocationRequest(GeolocationAccuracy.Medium);
             var location = await Geolocation.GetLocationAsync(request);
