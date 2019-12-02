@@ -4,6 +4,7 @@
              x:Class="PuebloMagicoH.Movil.GUI.App" NavigationPage.HasNavigationBar="True">
     <Application.Resources>
         <ResourceDictionary>
+            
             <Color x:Key="PrimaryColor">#4faa56</Color>
             <Color x:Key="SecundaryColor">#556df9</Color>
             <Color x:Key="txtSubtitulo">#6c6c6c</Color>

@@ -2,6 +2,7 @@
 using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
+using PuebloMagicoH.Movil.GUI.Viws.ViwsQueDeceasHacerHoy.ViwsGuiasDeTurismo.ViwsDirectorioDondeComer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,16 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             else
             {
                 DisplayAlert("Error", "No has seleccionado nada", "ok");
+            }
+        }
+
+        private void CollectionDeComercios_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Comercio comercio = CollectionDeComercios.SelectedItem as Comercio;
+
+            if (comercio != null)
+            {
+                Navigation.PushAsync(new PageDescripcionDirectorioDondeComer(comercio));
             }
         }
     }

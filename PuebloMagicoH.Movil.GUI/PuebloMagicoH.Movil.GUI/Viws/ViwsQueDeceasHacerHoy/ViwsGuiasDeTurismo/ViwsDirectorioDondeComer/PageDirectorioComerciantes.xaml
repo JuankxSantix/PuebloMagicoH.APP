@@ -19,7 +19,7 @@
                 <Frame BorderColor="Black" Margin="10,5" Grid.Row="1">
                     <ScrollView>
 
-                    <CollectionView Grid.Row="1" x:Name="CollectionDeComercios" ItemsSource="{Binding Comercio}">
+                    <CollectionView Grid.Row="1" x:Name="CollectionDeComercios" ItemsSource="{Binding Comercio}" SelectionMode="Single" SelectionChanged="CollectionDeComercios_SelectionChanged">
                         
                         <CollectionView.ItemTemplate>
                             <DataTemplate>

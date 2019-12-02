@@ -46,7 +46,10 @@
     <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\PageContactarConUnGuiaTuristico.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\PageDirectorioComerciantes.xaml">
+    <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\ViwsDirectorioDondeComer\PageDescripcionDirectorioDondeComer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\ViwsDirectorioDondeComer\PageDirectorioComerciantes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\PageDirectorioDeBalnearios.xaml">
