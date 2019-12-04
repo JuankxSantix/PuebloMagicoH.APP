@@ -2,6 +2,7 @@
 using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
+using PuebloMagicoH.Movil.GUI.Viws.ViwsQueDeceasHacerHoy.ViwsGuiasDeTurismo.ViwsAtractivosTuristicos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,5 +25,11 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             CollectionDeAtractivosTuristicos.ItemsSource = manejadorDeAtractivosTuristicos.Listar;
 
         }
-	}
+
+        private void CollectionDeAtractivosTuristicos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            AtractivosTuristicos atractivosTuristicos = CollectionDeAtractivosTuristicos.SelectedItem as AtractivosTuristicos;
+            Navigation.PushAsync(new PageDescripcionDeAtractivosTuristicos(atractivosTuristicos));
+        }
+    }
 }

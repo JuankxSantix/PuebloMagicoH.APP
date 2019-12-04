@@ -22,8 +22,10 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 			InitializeComponent ();
             manejadorDeHoteles = new ManejadorDeHoteles(new RepositorioGenerico<Hoteles>());
 
-            CollectionDeHoteles.ItemsSource = manejadorDeHoteles.Listar;
-            
+            CollectionDeHotelesLibres.ItemsSource = manejadorDeHoteles.Listar.Where(e=>e.HabitacionesDisponibles>=8);
+            CollectionDeHotelesEnAlerta.ItemsSource=manejadorDeHoteles.Listar.Where(e => e.HabitacionesDisponibles >= 5 && e.HabitacionesDisponibles<8);
+            CollectionDeHotelesEnRiesgo.ItemsSource=manejadorDeHoteles.Listar.Where(e => e.HabitacionesDisponibles<5);
+
         }
 	}
 }

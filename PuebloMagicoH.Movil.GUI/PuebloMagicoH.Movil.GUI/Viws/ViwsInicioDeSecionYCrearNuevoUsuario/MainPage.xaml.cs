@@ -23,23 +23,29 @@ namespace PuebloMagicoH.Movil.GUI
             InitializeComponent();
             manejadorDeUsuarios = new ManejadorUsuarios(new RepositorioGenerico<Usuarios>());
             model = BindingContext as LoginModel;
-
+            LimpiarCampos(true);
 
             
         }
 
+        private void LimpiarCampos(bool V)
+        {
+            model.Password = "";
+            model.Email = "";
+        }
+
         private void BtnIniciarSesion_Clicked(object sender, EventArgs e)
         {
-            
+
             //Usuarios usuario = manejadorDeUsuarios.BuscarContrasenia(model.Password);
             //Usuarios usuario1 = manejadorDeUsuarios.BuscarCorreo(model.Email);
-            
-            
-            //if (usuario.id.ToString()== usuario1.id.ToString()
+
+
+            //if (usuario.id.ToString() == usuario1.id.ToString())
             //{
-            //    DisplayAlert("Huichapan Pueblo Magico", "Bienvenido" + usuario.NombreDeUsuario, "ok");
-            
-            Navigation.PushAsync(new PageQueDeceasHacerHoy());
+            //    DisplayAlert("Huichapan Pueblo Magico", "Bienvenido:\n " + usuario.NombreDeUsuario, "ok");
+
+                Navigation.PushAsync(new PageQueDeceasHacerHoy());
             //}
             //else
             //{

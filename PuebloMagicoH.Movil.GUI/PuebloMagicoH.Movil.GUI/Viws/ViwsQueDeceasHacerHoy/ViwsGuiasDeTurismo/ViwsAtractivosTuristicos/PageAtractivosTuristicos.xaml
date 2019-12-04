@@ -12,7 +12,7 @@
             <Frame BorderColor="Black" Margin="10,5" Grid.Row="0">
                 <ScrollView>
 
-                    <CollectionView Grid.Row="1" x:Name="CollectionDeAtractivosTuristicos" ItemsSource="{Binding AtractivosTuristicos}">
+                    <CollectionView Grid.Row="1" x:Name="CollectionDeAtractivosTuristicos" ItemsSource="{Binding AtractivosTuristicos}" SelectionMode="Single" SelectionChanged="CollectionDeAtractivosTuristicos_SelectionChanged">
 
                         <CollectionView.ItemTemplate>
                             <DataTemplate>

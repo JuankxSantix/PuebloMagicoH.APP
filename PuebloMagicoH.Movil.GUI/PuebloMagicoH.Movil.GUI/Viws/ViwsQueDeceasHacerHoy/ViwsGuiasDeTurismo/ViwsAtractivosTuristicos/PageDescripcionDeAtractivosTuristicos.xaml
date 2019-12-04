@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PuebloMagicoH.Movil.GUI.Viws.ViwsQueDeceasHacerHoy.ViwsGuiasDeTurismo.ViwsAtractivosTuristicos.PageDescripcionDeAtractivosTuristicos">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="PreviuwDeDescripcionDeDirectorioDondeComer.png"></Image>
+                <StackLayout Grid.Row="1" Orientation="Horizontal">
+                    <Label x:Name="lblNombreDeAtractivoTuristico" HorizontalOptions="Start" Style="{StaticResource TextTitulo}" />
+                    <StackLayout HorizontalOptions="EndAndExpand"  Orientation="Horizontal">
+                        <Image HorizontalOptions="End" HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                        <Image HorizontalOptions="End" HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                        <Image HorizontalOptions="End" HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                        <Image HorizontalOptions="End" HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                        <Image HorizontalOptions="End" HeightRequest="10" Source="starCalif.png" WidthRequest="10" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Orientation="Horizontal">
+                    <Label x:Name="lblDireccion" FontSize="Medium" Style="{StaticResource TextNormal}" ></Label>
+                    <!--<Label x:Name="lblFecha" FontSize="Medium" Style="{StaticResource TextNormal}" ></Label>
+                    <Label x:Name="lblHora" FontSize="Medium" Style="{StaticResource TextNormal}" ></Label>-->
+                </StackLayout>
+                <StackLayout Grid.Row="3">
+                    <ScrollView>
+                        <Label x:Name="lblDescripcion" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Style="{StaticResource TextNormal}" />
+                    </ScrollView>
+                </StackLayout>
+                <Frame 
+                    HorizontalOptions="End"
+                    Margin="15,20"
+            Grid.Row="4"
+            Padding="0,0,0,-1"
+            CornerRadius="15"
+            BackgroundColor="{StaticResource PrimaryColor}"
+            HasShadow="True"
+            IsClippedToBounds="True">
+
+                    <Button Margin="20,0" Style="{StaticResource butttonNormal}" BackgroundColor="Transparent" Text="Agregar un comentaro" />
+                </Frame>
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
