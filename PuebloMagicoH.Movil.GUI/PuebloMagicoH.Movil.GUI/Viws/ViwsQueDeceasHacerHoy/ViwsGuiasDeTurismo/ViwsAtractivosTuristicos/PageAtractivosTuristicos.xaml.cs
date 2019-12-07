@@ -1,4 +1,5 @@
-﻿using PuebloMagicoH.BIZ;
+﻿using Android.Widget;
+using PuebloMagicoH.BIZ;
 using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
@@ -23,7 +24,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             InitializeComponent();
             manejadorDeAtractivosTuristicos = new ManejadorAtractivosTuristicos(new RepositorioGenerico<AtractivosTuristicos>());
             CollectionDeAtractivosTuristicos.ItemsSource = manejadorDeAtractivosTuristicos.Listar;
-
+            //Toast.MakeText(this,"sa", ToastLength.Long).Show(); Buscar como se implemeta
         }
 
         private void CollectionDeAtractivosTuristicos_SelectionChanged(object sender, SelectionChangedEventArgs e)

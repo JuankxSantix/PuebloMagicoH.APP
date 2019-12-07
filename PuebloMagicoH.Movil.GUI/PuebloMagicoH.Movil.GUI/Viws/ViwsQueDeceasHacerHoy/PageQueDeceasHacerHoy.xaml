@@ -11,21 +11,24 @@
                     <RowDefinition Height=" 3*"/>
                 </Grid.RowDefinitions>
 
-                <StackLayout Grid.Row="0" Orientation="Vertical" HorizontalOptions="Center" x:Name="stak" Focused="Stak_Focused">
-                    <Grid>
+                <StackLayout Grid.Row="0" Orientation="Vertical" HorizontalOptions="Center" >
+                    <Grid >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         
                         <StackLayout Orientation="Vertical" Grid.Row="0" >
-                            <ImageButton HorizontalOptions="Center" Source="ExploracionLibre.png" x:Name="ApartadoExploracionLibre" Clicked="ApartadoExploracionLibre_Clicked" Style="{StaticResource btnImagen}"></ImageButton>
-                            <Label  FontSize="Title" HorizontalOptions="Center" Text="Exploración libre" Style="{StaticResource TextTitulo}"  x:Name="lblTi"></Label>
+                            <Image HorizontalOptions="Center" Source="ExploracionLibre.png" x:Name="ApartadoExploracionLibre" Style="{StaticResource btnImagen}"></Image>
+                            <Label FontSize="Title" HorizontalOptions="Center" Text="Exploración libre" Style="{StaticResource TextTitulo}" x:Name="lblTi"></Label>
                         </StackLayout>
-
                         <Label FontSize="Subtitle" Grid.Row="1" HorizontalOptions="Center" x:Name="lblExploracionLibre" Style="{StaticResource  TextSubTitulo}"></Label>
-
                     </Grid>
+
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ApartadoExploracionLibre_Clicked"/>
+                    </StackLayout.GestureRecognizers>
+                
                 </StackLayout>
 
                 <StackLayout Grid.Row="1" Orientation="Vertical" HorizontalOptions="Center">
@@ -36,13 +39,16 @@
                         </Grid.RowDefinitions>
 
                         <StackLayout Orientation="Vertical" Grid.Row="0">
-                            <ImageButton x:Name="ApartadoGuiaDeTurismo" HorizontalOptions="Center" Source="GuiaDeTurismo.png" Clicked="ApartadoGuiaDeTurismo_Clicked" Style="{StaticResource btnImagen}"></ImageButton>
+                            <Image HorizontalOptions="Center" Source="GuiaDeTurismo.png" Style="{StaticResource btnImagen}"></Image>
                             <Label FontSize="Title" HorizontalOptions="Center" Text="Guía de Turismo" Style="{StaticResource TextTitulo}"></Label>
                         </StackLayout>
 
                         <Label FontSize="Subtitle" Grid.Row="1" HorizontalOptions="Center" x:Name="lblGruiaDeTutismo" Style="{StaticResource  TextSubTitulo}"></Label>
 
                     </Grid>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ApartadoGuiaDeTurismo_Clicked"/>
+                    </StackLayout.GestureRecognizers>
                 </StackLayout>
 
                 <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="Center">
@@ -53,13 +59,16 @@
                         </Grid.RowDefinitions>
 
                         <StackLayout Orientation="Vertical" Grid.Row="0">
-                            <ImageButton x:Name="apartdaoComoTeSietesHoy" HorizontalOptions="Center" Source="ComoTeSientesHoy.png" Clicked="ApartdaoComoTeSietesHoy_Clicked" Style="{StaticResource btnImagen}"></ImageButton>
+                            <Image HorizontalOptions="Center" Source="ComoTeSientesHoy.png" Style="{StaticResource btnImagen}"></Image>
                             <Label FontSize="Title" HorizontalOptions="Center" Text="Como te sientes hoy" Style="{StaticResource TextTitulo}"></Label>
                         </StackLayout>
 
                         <Label FontSize="Subtitle" Grid.Row="1" HorizontalOptions="Center" x:Name="lblDeComoTeSientesHoy" Style="{StaticResource  TextSubTitulo}"></Label>
 
                     </Grid>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ApartdaoComoTeSietesHoy_Clicked"/>
+                    </StackLayout.GestureRecognizers>
                 </StackLayout>
 
             </Grid>
