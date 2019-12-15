@@ -1,4 +1,6 @@
 ﻿using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseIntermediaLugares.SubClaseUsuaiosValidadores;
+using PuebloMagicoH.COMMON.Entidades.EntidadBase;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,6 +9,7 @@ namespace PuebloMagicoH.COMMON.Interfaces
 {
     public interface IManejadorDeComercios:IManejadorGenerico<Comercio>
     {
-        List<Comercio> ListarPCategoria { get; }
+
+        List<Comercio> CategoriaDeComercio(CategoriaEstablecimiento categoriaEstablecimiento);
     }
 }

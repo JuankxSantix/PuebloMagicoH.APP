@@ -50,7 +50,7 @@
     <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\PageCompartirUnaFoto.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\PageContactarConUnGuiaTuristico.xaml">
+    <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\ViwsGuias\PageContactarConUnGuiaTuristico.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\ViwsAtractivosTuristicos\PageDescripcionDeAtractivosTuristicos.xaml">
@@ -101,7 +101,7 @@
     <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\PageSeguridadPublica.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\PageServiciosDeEmergencia.xaml">
+    <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\ViwsServiciosDeEmergencia\PageServiciosDeEmergencia.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Viws\ViwsQueDeceasHacerHoy\ViwsGuiasDeTurismo\PageTurismoReligioso.xaml">

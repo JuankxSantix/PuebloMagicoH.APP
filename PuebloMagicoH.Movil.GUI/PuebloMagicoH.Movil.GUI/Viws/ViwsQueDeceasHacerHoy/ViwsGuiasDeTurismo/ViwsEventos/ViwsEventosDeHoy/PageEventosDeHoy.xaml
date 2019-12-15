@@ -37,11 +37,11 @@
                                         </Frame>
 
                                         <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalOptions="Center">
-                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextTitulo}" Text="{Binding NombreEvento}"/>
+                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextTitulo}" Text="{Binding Nombre}"/>
                                         </StackLayout>
 
                                         <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal" VerticalOptions="Center">
-                                            <Label HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" Style="{StaticResource TextSubTitulo}" Text="{Binding LugarEvento}"/>
+                                            <Label HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" Style="{StaticResource TextSubTitulo}" Text="{Binding Direccion}"/>
                                             <Label HorizontalOptions="End" HorizontalTextAlignment="End" Style="{StaticResource TextSubTitulo}" Text="{Binding FechaInicio}"/>
                                         </StackLayout>
 

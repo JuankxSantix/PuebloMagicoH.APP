@@ -9,13 +9,13 @@ using System.Linq.Expressions;
 
 namespace PuebloMagicoH.COMMON
 {
-    public class Repositorio<T> where T : BaseDTO
+    public class IRepositorio<T> where T : BaseDTO
     {
         private MongoClient client;
         private IMongoDatabase db;
         bool Resulatado;
         public string Error { get; private set; }
-        public Repositorio()
+        public IRepositorio()
         {
             //User1
             //ControlPuebloMagico

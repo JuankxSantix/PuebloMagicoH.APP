@@ -1,5 +1,6 @@
 ﻿using PuebloMagicoH.BIZ;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseIntermediaLugares.SubClaseUsuaiosValidadores;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
 using System;
@@ -22,9 +23,9 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 			InitializeComponent ();
             manejadorDeHoteles = new ManejadorDeHoteles(new RepositorioGenerico<Hoteles>());
 
-            CollectionDeHotelesLibres.ItemsSource = manejadorDeHoteles.Listar.Where(e=>e.HabitacionesDisponibles>=8);
-            CollectionDeHotelesEnAlerta.ItemsSource=manejadorDeHoteles.Listar.Where(e => e.HabitacionesDisponibles >= 5 && e.HabitacionesDisponibles<8);
-            CollectionDeHotelesEnRiesgo.ItemsSource=manejadorDeHoteles.Listar.Where(e => e.HabitacionesDisponibles<5);
+            CollectionDeHotelesLibres.ItemsSource = manejadorDeHoteles.Listar.Where(e=>e.NumeroDeHabitaciones>=8);
+            CollectionDeHotelesEnAlerta.ItemsSource=manejadorDeHoteles.Listar.Where(e => e.NumeroDeHabitaciones >= 5 && e.NumeroDeHabitaciones<8);
+            CollectionDeHotelesEnRiesgo.ItemsSource=manejadorDeHoteles.Listar.Where(e => e.NumeroDeHabitaciones<5);
 
         }
 	}

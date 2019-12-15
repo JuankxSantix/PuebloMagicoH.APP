@@ -1,5 +1,6 @@
 ﻿using PuebloMagicoH.BIZ;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
 using System;
@@ -23,11 +24,11 @@ namespace PuebloMagicoH.Movil.GUI.Viws.ViwsGuiasDeTurismo.ViwsEventosDeHoy
 
             manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
             
-            Title = "¡"+eventos.NombreEvento+"!";
+            Title = "¡"+eventos.Nombre+"!";
 
-            lblNombreDeEvento.Text = eventos.NombreEvento;
+            lblNombreDeEvento.Text = eventos.Nombre;
             lblDescripcion.Text = eventos.Descripcion;
-            lblDireccion.Text = eventos.LugarEvento;
+            lblDireccion.Text = eventos.Direccion;
             lblFecha.Text = eventos.FechaInicio.ToLongDateString();
             lblHora.Text = eventos.FechaInicio.ToShortTimeString();
         }

@@ -1,6 +1,7 @@
 ﻿using PuebloMagicoH.BIZ;
 using PuebloMagicoH.COMMON;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClasesUsuarios;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.COMMON.Modelos;
 using PuebloMagicoH.DAL;
@@ -16,12 +17,12 @@ namespace PuebloMagicoH.Movil.GUI
 {
     public partial class MainPage : ContentPage
     {
-        IManejadorDeUsuarios manejadorDeUsuarios;
+        IManejadorDeUsuariosTuristicos manejadorDeUsuarios;
         LoginModel model;
         public MainPage()
         {
             InitializeComponent();
-            manejadorDeUsuarios = new ManejadorUsuarios(new RepositorioGenerico<Usuarios>());
+            manejadorDeUsuarios = new ManejadorUsuariosTuristicos(new RepositorioGenerico<UsuarioTurista>());
             model = BindingContext as LoginModel;
             LimpiarCampos(true);
 
@@ -37,15 +38,15 @@ namespace PuebloMagicoH.Movil.GUI
         private void BtnIniciarSesion_Clicked(object sender, EventArgs e)
         {
 
-            //Usuarios usuario = manejadorDeUsuarios.BuscarContrasenia(model.Password);
-            //Usuarios usuario1 = manejadorDeUsuarios.BuscarCorreo(model.Email);
+            //UsuarioTurista usuario = manejadorDeUsuarios.BuscarContrasenia(model.Password);
+            //UsuarioTurista usuario1 = manejadorDeUsuarios.BuscarCorreo(model.Email);
 
 
             //if (usuario.id.ToString() == usuario1.id.ToString())
             //{
             //    DisplayAlert("Huichapan Pueblo Magico", "Bienvenido:\n " + usuario.NombreDeUsuario, "ok");
 
-                Navigation.PushAsync(new PageQueDeceasHacerHoy());
+            Navigation.PushAsync(new PageQueDeceasHacerHoy());
             //}
             //else
             //{

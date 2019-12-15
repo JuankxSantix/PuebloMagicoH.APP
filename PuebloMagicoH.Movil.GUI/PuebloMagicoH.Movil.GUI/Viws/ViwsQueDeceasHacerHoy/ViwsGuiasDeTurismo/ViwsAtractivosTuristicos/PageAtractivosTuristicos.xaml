@@ -34,7 +34,7 @@
                                         </Frame>
 
                                         <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextTitulo}" Text="{Binding NombreAtractivo}"/>
+                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextTitulo}" Text="{Binding Nombre}"/>
                                         </StackLayout>
 
                                         <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">

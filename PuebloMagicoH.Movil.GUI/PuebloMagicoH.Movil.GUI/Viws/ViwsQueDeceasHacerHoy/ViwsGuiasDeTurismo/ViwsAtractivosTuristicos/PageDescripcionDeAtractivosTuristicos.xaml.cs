@@ -1,4 +1,5 @@
 ﻿using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseIntermediaTuristicos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,8 @@ namespace PuebloMagicoH.Movil.GUI.Viws.ViwsQueDeceasHacerHoy.ViwsGuiasDeTurismo.
 		{
 			InitializeComponent ();
 
-            lblNombreDeAtractivoTuristico.Text = atractivosTuristicos.NombreAtractivo;
-            Title = "¡"+atractivosTuristicos.NombreAtractivo+"!";
+            lblNombreDeAtractivoTuristico.Text = atractivosTuristicos.Nombre;
+            Title = "¡"+atractivosTuristicos.Nombre + "!";
             lblDescripcion.Text = atractivosTuristicos.Descripcion;
             lblDireccion.Text = atractivosTuristicos.Direccion;
 		}

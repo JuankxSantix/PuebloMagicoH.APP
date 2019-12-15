@@ -1,6 +1,7 @@
 ﻿
 using MongoDB.Bson;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.EntidadBase;
 using PuebloMagicoH.COMMON.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -11,31 +12,33 @@ namespace PuebloMagicoH.BIZ
 {
     public class ManejadorCategoriaEstablecimientos : IManejadorDeCategoriaEstablecimientos
     {
-        IRepositorio<CategoriaEstablecimientos> repositorio;
-        public ManejadorCategoriaEstablecimientos(IRepositorio<CategoriaEstablecimientos> repositorio)
+        IRepositorio<CategoriaEstablecimiento> repositorio;
+        public ManejadorCategoriaEstablecimientos(IRepositorio<CategoriaEstablecimiento> repositorio)
         {
             this.repositorio = repositorio;
         }
-        public List<CategoriaEstablecimientos> Listar => repositorio.Read;
+        public List<CategoriaEstablecimiento> Listar => repositorio.Read;
 
-        public bool AGREGAR(CategoriaEstablecimientos entidad)
+
+        public bool AGREGAR(CategoriaEstablecimiento entidad)
         {
             return repositorio.Create(entidad);
         }
 
-        public CategoriaEstablecimientos BuscarPorID(ObjectId Id)
+        public CategoriaEstablecimiento BuscarPorID(ObjectId Id)
         {
             return Listar.Where(e => e.id == Id).SingleOrDefault();
         }
-
+        
         public bool Eliminar(ObjectId id)
         {
             return repositorio.Delete(id);
         }
 
-        public bool Modificar(CategoriaEstablecimientos entidad)
+        public bool Modificar(CategoriaEstablecimiento entidad)
         {
             return repositorio.Update(entidad);
         }
+        
     }
 }

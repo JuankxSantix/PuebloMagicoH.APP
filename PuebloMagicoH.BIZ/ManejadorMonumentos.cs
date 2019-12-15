@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseIntermediaTuristicos;
 using PuebloMagicoH.COMMON.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,7 @@ namespace PuebloMagicoH.BIZ
         {
             return Listar.Where(e => e.id == Id).SingleOrDefault();
         }
-
+        
         public bool Eliminar(ObjectId id)
         {
             return repositorio.Delete(id);
@@ -36,5 +37,6 @@ namespace PuebloMagicoH.BIZ
         {
             return repositorio.Update(entidad);
         }
+        
     }
 }

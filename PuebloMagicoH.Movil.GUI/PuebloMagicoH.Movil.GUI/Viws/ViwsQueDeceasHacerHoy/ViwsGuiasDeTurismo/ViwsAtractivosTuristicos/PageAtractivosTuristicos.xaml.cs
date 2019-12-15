@@ -1,6 +1,7 @@
 ﻿using Android.Widget;
 using PuebloMagicoH.BIZ;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseIntermediaTuristicos;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
 using PuebloMagicoH.Movil.GUI.Viws.ViwsQueDeceasHacerHoy.ViwsGuiasDeTurismo.ViwsAtractivosTuristicos;

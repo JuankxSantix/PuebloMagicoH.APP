@@ -1,6 +1,7 @@
 ﻿using PuebloMagicoH.BIZ;
 using PuebloMagicoH.COMMON;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClasesUsuarios;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
 using System;
@@ -24,13 +25,13 @@ namespace PuebloMagicoH.Movil.GUI
         List<string> Ocupacion;
         List<string> VienesPor;
         List<string> TeEnterastePor;
-        IManejadorDeUsuarios manejadorDeUsuarios;
+        IManejadorDeUsuariosTuristicos manejadorDeUsuarios;
 
         public VentanaCrearNuevoUsuario ()
 		{
 			InitializeComponent();
             //repositorio = new Repositorio<Usuarios>();
-            manejadorDeUsuarios = new ManejadorUsuarios(new RepositorioGenerico<Usuarios>());
+            manejadorDeUsuarios = new ManejadorUsuariosTuristicos(new RepositorioGenerico<UsuarioTurista>());
             ElementosInicalizar();
             
             
@@ -94,7 +95,7 @@ namespace PuebloMagicoH.Movil.GUI
             {
                 if (txtContrasenia.Text == txtContrasenia.Text)
                 {
-                   Usuarios usuario = new Usuarios()
+                   UsuarioTurista usuario = new UsuarioTurista()
                     {
                         Ciudad = pickerCiudad.SelectedItem.ToString(),
                         Contrasenia = txtContrasenia.Text,
@@ -102,33 +103,22 @@ namespace PuebloMagicoH.Movil.GUI
                         EnteradoPor = pickerTeEnterastePor.SelectedItem.ToString(),
                         Estado = pickerEstado.SelectedItem.ToString(),
                         MotivoDeVisita = pickerVienesAHuichapanPor.SelectedItem.ToString(),
-                        NombreDeUsuario = txtNombre.Text,
+                        Nombre = txtNombre.Text,
                         Genero = pickerGenero.SelectedItem.ToString(),
                         Ocupacion = pickerOcupacion.SelectedItem.ToString(),
                         FechaDeNacimiento = datepickerNAcimiento.Date,
+                         
 
                     };
                     if(manejadorDeUsuarios.AGREGAR(usuario))
                     {
-                        DisplayAlert("Huichapan Pueblo Magico", "Usuario "+usuario.NombreDeUsuario+"\n creado correctamente", "Aceptar", "Canselar");
+
+                        DisplayAlert("Huichapan Pueblo Magico", "Usuario "+usuario.Nombre+"\n creado correctamente", "Aceptar", "Canselar");
                     }
                     else
                     {
                         DisplayAlert("Huichapan Pueblo Magico", "No se ha podido registrar su usuario \npor favor intente mas tarde", "Aceptar");
                     }
-                    //repositorio.Create(usuario);
-                    //int con=repositorio.Read.Count();
-                    //if (con>0)
-
-                    //{
-                    //    DisplayAlert("Huichapan Pueblo Magico", "Tu registro fue exitoso\nInicia sesión", "Aceptar");
-                    //    Navigation.PushAsync(new MainPage());
-                    //}
-                    //else
-                    //{
-                    //    DisplayAlert("Huichapan Pueblo Magico", "Error\nNo se puede realizar tu registro por el momento", "Aceptar", "Canselar");
-                    //}
-
 
                 }
                 else

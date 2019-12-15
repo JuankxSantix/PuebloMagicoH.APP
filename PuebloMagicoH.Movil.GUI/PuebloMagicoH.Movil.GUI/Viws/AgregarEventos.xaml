@@ -16,6 +16,11 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
                 <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="15,10">
@@ -30,10 +35,10 @@
                     </StackLayout>
 
                 </StackLayout>
-                <!--<StackLayout Orientation="Horizontal" Grid.Row="1" >
+                <StackLayout Orientation="Horizontal" Grid.Row="1" >
                     <Label Text="categoria"></Label>
-                    <Entry WidthRequest="200" x:Name="txtCategoria"></Entry>
-                </StackLayout>-->
+                    <Picker WidthRequest="200" x:Name="Categoria"></Picker>
+                </StackLayout>
                 <StackLayout Orientation="Horizontal" Grid.Row="2" >
                     <Label Text="Nombre "></Label>
                     <Entry WidthRequest="200" x:Name="txtnombre"></Entry>
@@ -42,20 +47,25 @@
                     <Label Text="Direccion"></Label>
                     <Entry WidthRequest="200" x:Name="txtDireccion"></Entry>
                 </StackLayout>
-                <!--<StackLayout Orientation="Horizontal" Grid.Row="4" >
-                    <Label Text="Habitaciones"></Label>
-                    <Entry WidthRequest="200" x:Name="txtHabitaciones"></Entry>
-                </StackLayout>-->
+                <StackLayout Orientation="Horizontal" Grid.Row="4" >
+                    <Label Text="Telefono"></Label>
+                    <Entry WidthRequest="200" x:Name="txtTelefono"></Entry>
+                </StackLayout>
                 <StackLayout Orientation="Horizontal" Grid.Row="5" >
                     <Label Text="Descripcion"></Label>
                     <Entry WidthRequest="200" x:Name="txtdescriociono"></Entry>
                 </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="6" >
+                    <Label Text="Horario De Atencion"></Label>
+                    <Entry WidthRequest="200" x:Name="txtHorarioDeAtencion"></Entry>
+                </StackLayout>
 
-                <Button Text="Seleccionar una imagen" x:Name="btnSeleccionarUnaImagen" Clicked="BtnSeleccionarUnaImagen_Clicked" Grid.Row="6"></Button>
-                <Image x:Name="MiImagen" Margin="10" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="7"></Image>
+                <Button Text="Seleccionar una imagen" x:Name="btnSeleccionarUnaImagen" Clicked="BtnSeleccionarUnaImagen_Clicked" Grid.Row="10"></Button>
+                <Image x:Name="MiImagen" Margin="10" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="11"></Image>
 
 
-                <Button Text="Buscar" x:Name="Agregar" Clicked="Agregar_Clicked" Grid.Row="8"></Button>
+                <Button Text="Buscar" x:Name="Agregar" Clicked="Agregar_Clicked" Grid.Row="12"></Button>
+                <Button Text="Red" x:Name="AgregarRed" Clicked="AgregarRed_Clicked" Grid.Row="13"></Button>
             </Grid>
         </ScrollView>
     </ContentPage.Content>

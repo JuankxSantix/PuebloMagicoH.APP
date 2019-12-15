@@ -1,5 +1,6 @@
 ﻿using PuebloMagicoH.BIZ;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseIntermediaLugares.SubClaseUsuaiosValidadores;
 using PuebloMagicoH.COMMON.Interfaces;
 using PuebloMagicoH.DAL;
 using System;

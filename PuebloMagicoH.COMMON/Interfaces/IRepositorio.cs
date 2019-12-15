@@ -12,5 +12,6 @@ namespace PuebloMagicoH.COMMON.Interfaces
         List<T> Read { get; }
         bool Update(T entidadModificada);
         bool Delete(ObjectId Id);
+        
     }
 }

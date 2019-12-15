@@ -1,5 +1,7 @@
 ﻿using MongoDB.Bson;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseIntermediaLugares.SubClaseUsuaiosValidadores;
+using PuebloMagicoH.COMMON.Entidades.EntidadBase;
 using PuebloMagicoH.COMMON.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,6 @@ namespace PuebloMagicoH.BIZ
         }
         public List<Comercio> Listar => repositorio.Read;
 
-        public List<Comercio> ListarPCategoria => repositorio.Read.Where(e => e.CategoriaEstablecimiento != "").ToList();
 
         public bool AGREGAR(Comercio entidad)
         {
@@ -29,6 +30,11 @@ namespace PuebloMagicoH.BIZ
             return Listar.Where(e => e.id == Id).SingleOrDefault();
         }
 
+        public List<Comercio> CategoriaDeComercio(CategoriaEstablecimiento categoriaEstablecimiento)
+        {
+            return Listar.Where(e => e.CategoriaEstablecimiento == categoriaEstablecimiento).ToList();
+        }
+
         public bool Eliminar(ObjectId id)
         {
             return repositorio.Delete(id);
@@ -38,5 +44,6 @@ namespace PuebloMagicoH.BIZ
         {
             return repositorio.Update(entidad);
         }
+        
     }
 }

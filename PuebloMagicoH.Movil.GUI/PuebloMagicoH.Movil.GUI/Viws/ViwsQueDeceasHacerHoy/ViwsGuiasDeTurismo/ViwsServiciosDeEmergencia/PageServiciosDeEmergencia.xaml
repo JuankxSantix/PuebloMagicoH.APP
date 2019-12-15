@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PuebloMagicoH.Movil.GUI.Viws.PageServiciosDeEmergencia" Title="Servicios de emergencia">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <!--<Label Grid.Row="0" FontSize="Subtitle" x:Name="lblFecha" Style="{StaticResource TextNormal}" HorizontalOptions="Start" HorizontalTextAlignment="Start" VerticalOptions="Center" ></Label>-->
+
+            <Frame BorderColor="Black" Margin="5,5" Grid.Row="1">
+                <ScrollView>
+                    <CollectionView Grid.Row="1" x:Name="CollectionDeTelefonosEmergencia" ItemsSource="{Binding TelefonosEmergencia}" SelectionMode="Single" ><!--SelectionChanged="CollectionDeTelefonosEmergencia_SelectionChanged"-->
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BorderColor="Black">
+
+                                    <Grid >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Frame Grid.RowSpan="3" Grid.Row="0" Grid.Column="0">
+                                            <Image Source="Previw.png" x:Name="BtnVerEvento" />
+                                        </Frame>
+
+                                        <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalOptions="Center">
+                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextTitulo}" Text="{Binding Nombre}"/>
+                                        </StackLayout>
+
+                                        <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal" VerticalOptions="Center">
+                                            <Label HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" Style="{StaticResource TextSubTitulo}" Text="{Binding Direccion}"/>
+                                            <Label HorizontalOptions="End" HorizontalTextAlignment="End" Style="{StaticResource TextSubTitulo}" Text="{Binding Telefono}"/>
+                                        </StackLayout>
+
+                                        <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalOptions="Center">
+                                            <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextNormal}" Text="{Binding Encargado}"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+            </Frame>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

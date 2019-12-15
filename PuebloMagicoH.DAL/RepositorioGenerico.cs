@@ -1,10 +1,11 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.GridFS;
 using PuebloMagicoH.COMMON.Entidades;
 using PuebloMagicoH.COMMON.Interfaces;
 using System;
 using System.Collections.Generic;
-    
+using System.IO;
 using System.Text;
 
 namespace PuebloMagicoH.DAL
@@ -13,6 +14,9 @@ namespace PuebloMagicoH.DAL
     {
         private MongoClient client;
         private IMongoDatabase db;
+        GridFSBucket contenerdor;
+        string _error;
+
         public RepositorioGenerico()
         {
 
@@ -23,7 +27,7 @@ namespace PuebloMagicoH.DAL
 
             client = new MongoClient(new MongoUrl(@"mongodb://huichapan:juankx1@ds063449.mlab.com:63449/huichapandb?retryWrites=false&AuthMechanism=SCRAM-SHA-1"));
             db = client.GetDatabase("huichapandb");
-
+            contenerdor = new GridFSBucket(db);
             //string user;     // the user name
             //string database; // the name of the database in which the user is defined
             ////char[] password; // the password as a character array
@@ -47,6 +51,8 @@ namespace PuebloMagicoH.DAL
             return db.GetCollection<T>(typeof(T).Name);
         }
         public List<T> Read => Collection().AsQueryable().ToList();
+
+        //public string Error => _error;
 
         public bool Create(T entidad)
         {
@@ -89,5 +95,52 @@ namespace PuebloMagicoH.DAL
                 return false;
             }
         }
+
+        //public string Upload(string descripcionDeArchivo, byte[] datos)
+        //{
+        //    try
+        //    {
+
+        //        string id = contenerdor.UploadFromStream(descripcionDeArchivo, new MemoryStream(datos)).ToString();
+        //        _error = "";
+        //        return id;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _error = ex.Message;
+        //        return null;
+        //    }
+        //}
+
+        //public byte[] Download(ObjectId id)
+        //{
+        //    try
+        //    {
+        //        _error = "";
+        //        MemoryStream archivo = new MemoryStream();
+        //        contenerdor.DownloadToStream(id, archivo);
+        //        return archivo.ToArray();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _error = ex.Message;
+        //        return null;
+        //    }
+        //}
+
+        //public bool DeletePhoto(ObjectId id)
+        //{
+        //    try
+        //    {
+        //        _error = "";
+        //        contenerdor.Delete(id);
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _error = ex.Message;
+        //        return false;
+        //    }
+        //}
     }
 }

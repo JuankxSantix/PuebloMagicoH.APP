@@ -1,4 +1,5 @@
 ﻿using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares;
 using System;
 using System.Collections.Generic;
 using System.Text;

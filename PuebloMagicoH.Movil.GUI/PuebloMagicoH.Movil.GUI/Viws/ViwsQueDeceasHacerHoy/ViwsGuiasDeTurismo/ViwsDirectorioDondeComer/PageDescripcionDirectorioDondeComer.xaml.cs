@@ -1,4 +1,5 @@
 ﻿using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseIntermediaLugares.SubClaseUsuaiosValidadores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +18,10 @@ namespace PuebloMagicoH.Movil.GUI.Viws.ViwsQueDeceasHacerHoy.ViwsGuiasDeTurismo.
 		{
 			InitializeComponent ();
 
-            Title = "Restaurante: "+comercio.NombreComercio;
+            Title = "Restaurante: "+comercio.Nombre;
             lblDescripcion.Text = comercio.Descripcion;
             lblDireccion.Text = comercio.Direccion;
-            lblNombreDeDirectorioDeComercio.Text = comercio.NombreComercio;
+            lblNombreDeDirectorioDeComercio.Text = comercio.Nombre;
 		}
 	}
 }

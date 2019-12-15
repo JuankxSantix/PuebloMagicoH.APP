@@ -13,5 +13,6 @@ namespace PuebloMagicoH.COMMON.Interfaces
         bool Eliminar(ObjectId id);
         bool Modificar(T entidad);
         T BuscarPorID(ObjectId Id);
+        
     }
 }

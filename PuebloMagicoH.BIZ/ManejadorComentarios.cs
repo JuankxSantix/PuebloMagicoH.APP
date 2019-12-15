@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseC_O_F;
 using PuebloMagicoH.COMMON.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -36,5 +37,6 @@ namespace PuebloMagicoH.BIZ
         {
             return repositorio.Update(entidad);
         }
+
     }
 }

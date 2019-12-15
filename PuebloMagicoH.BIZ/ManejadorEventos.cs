@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using PuebloMagicoH.COMMON.Entidades;
+using PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares;
 using PuebloMagicoH.COMMON.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,7 @@ namespace PuebloMagicoH.BIZ
         {
             return Listar.Where(e => e.id == Id).SingleOrDefault();
         }
-
+        
         public bool Eliminar(ObjectId id)
         {
             return repositorio.Delete(id);
@@ -34,17 +35,18 @@ namespace PuebloMagicoH.BIZ
 
         public List<Eventos> EvendoDelDia(DateTime Fecha)
         {
-            return Listar.Where(e =>  Fecha>= e.FechaInicio  || Fecha <= e.FechaFinal ).ToList();
+            return Listar.Where(e =>  Fecha>= e.FechaInicio  || Fecha <= e.FechaFin ).ToList();
         }
 
         public List<Eventos> EventosEntre(DateTime FechaInicio, DateTime FechaFin)
         {
-            return Listar.Where(e => FechaInicio >= e.FechaInicio  && FechaFin <= e.FechaFinal ).ToList();
+            return Listar.Where(e => FechaInicio >= e.FechaInicio   && FechaFin <= e.FechaFin).ToList();
         }
 
         public bool Modificar(Eventos entidad)
         {
             return repositorio.Update(entidad);
         }
+        
     }
 }
