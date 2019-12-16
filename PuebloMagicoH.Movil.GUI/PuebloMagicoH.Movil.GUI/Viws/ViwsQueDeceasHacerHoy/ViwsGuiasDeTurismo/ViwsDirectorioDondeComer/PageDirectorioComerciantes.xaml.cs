@@ -28,7 +28,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             manejadorDeCategoriaEstablecimientos = new ManejadorCategoriaEstablecimientos(new RepositorioGenerico<CategoriaEstablecimiento>());
             manejadorDeComercios = new ManejadorComercios(new RepositorioGenerico<Comercio>());
             PickerCategorias.ItemsSource = manejadorDeCategoriaEstablecimientos.Listar;
-            CollectionDeComercios.ItemsSource = manejadorDeComercios.Listar;
+            //CollectionDeComercios.ItemsSource = manejadorDeComercios.Listar;
 		}
 
         private void PickerCategorias_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,8 +36,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
             if (PickerCategorias.SelectedItem != null)
             {
                 CategoriaEstablecimiento categoriaEstablecimiento = PickerCategorias.SelectedItem as CategoriaEstablecimiento;
-                //CollectionDeComercios.ItemsSource = manejadorDeComercios.CategoriaDeComercio(PickerCategorias.SelectedItem as CategoriaEstablecimiento);
-                CollectionDeComercios.ItemsSource = manejadorDeComercios.Listar.Where(D => D.CategoriaEstablecimiento == categoriaEstablecimiento).ToList();  
+                CollectionDeComercios.ItemsSource = manejadorDeComercios.CategoriaDeComercio(PickerCategorias.SelectedItem as CategoriaEstablecimiento);
             }
             else
             {

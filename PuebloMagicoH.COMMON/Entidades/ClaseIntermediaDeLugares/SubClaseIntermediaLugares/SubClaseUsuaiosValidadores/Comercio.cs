@@ -7,7 +7,6 @@ namespace PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseInterm
 {
     public class Comercio:SubClassUsuariosValidadores
     {
-        //public string CategoriaEstablecimiento { get; set; }
-        public CategoriaEstablecimiento CategoriaEstablecimiento { get; set; }
+        public string CategoriaEstablecimiento { get; set; }
     }
 }

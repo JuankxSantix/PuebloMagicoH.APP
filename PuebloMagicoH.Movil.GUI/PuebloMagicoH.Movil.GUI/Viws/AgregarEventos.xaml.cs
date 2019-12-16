@@ -73,7 +73,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 
             comercio = new Comercio()
             {
-                CategoriaEstablecimiento = Categoria.SelectedItem as CategoriaEstablecimiento,
+                CategoriaEstablecimiento = Categoria.SelectedItem.ToString(),
                 Descripcion = txtdescriociono.Text,
                 Nombre = txtnombre.Text,
                 Telefono = txtTelefono.Text,

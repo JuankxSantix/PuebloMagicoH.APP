@@ -32,7 +32,7 @@ namespace PuebloMagicoH.BIZ
 
         public List<Comercio> CategoriaDeComercio(CategoriaEstablecimiento categoriaEstablecimiento)
         {
-            return Listar.Where(e => e.CategoriaEstablecimiento == categoriaEstablecimiento).ToList();
+            return Listar.Where(e => e.CategoriaEstablecimiento == categoriaEstablecimiento.Nombre).ToList();
         }
 
         public bool Eliminar(ObjectId id)
