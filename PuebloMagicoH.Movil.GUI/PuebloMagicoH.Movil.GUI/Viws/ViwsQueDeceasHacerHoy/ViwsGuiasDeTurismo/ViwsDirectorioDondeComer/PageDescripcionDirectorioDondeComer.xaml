@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PuebloMagicoH.Movil.GUI.Viws.ViwsQueDeceasHacerHoy.ViwsGuiasDeTurismo.ViwsDirectorioDondeComer.PageDescripcionDirectorioDondeComer">
     <ContentPage.Content>
-        <ScrollView>
+        <!--<ScrollView>-->
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="3*"/>
-                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
 
                 <Image Grid.Row="0" Source="PreviuwDeDescripcionDeDirectorioDondeComer.png"></Image>
@@ -29,26 +29,54 @@
                     <!--<Label x:Name="lblFecha" FontSize="Medium" Style="{StaticResource TextNormal}" ></Label>
                     <Label x:Name="lblHora" FontSize="Medium" Style="{StaticResource TextNormal}" ></Label>-->
                 </StackLayout>
-                <StackLayout Grid.Row="3">
-                    <ScrollView>
-                        <Label x:Name="lblDescripcion" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Style="{StaticResource TextNormal}" />
-                    </ScrollView>
+                <StackLayout Grid.Row="3" >
+                    <StackLayout>
+                        <ScrollView>
+                            <Label x:Name="lblDescripcion" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Style="{StaticResource TextNormal}" />
+                        </ScrollView>
+                    </StackLayout>
+                    
                 </StackLayout>
-                <Frame 
-                    HorizontalOptions="End"
-                    Margin="15,20"
-            Grid.Row="4"
-            Padding="0,0,0,-1"
-            CornerRadius="15"
-            BackgroundColor="{StaticResource PrimaryColor}"
-            HasShadow="True"
-            IsClippedToBounds="True">
+            <StackLayout Grid.Row="4" Orientation="Vertical">
+                <StackLayout>
+                    <Label Text="Rede(s) social(es)" Style="{StaticResource TextTitulo}" FontSize="Body" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start"></Label>
+                </StackLayout>
+                <CollectionView Grid.Row="1" x:Name="CollectionDeRedesSociales" ItemsSource="{Binding RedSocial}" SelectionMode="Single" SelectionChanged="CollectionDeRedesSociales_SelectionChanged">
 
-                    <Button Margin="20,0" Style="{StaticResource butttonNormal}" BackgroundColor="Transparent" Text="Agregar un comentaro" />
-                </Frame>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="Black">
 
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
 
-            </Grid>
-        </ScrollView>
+                                    <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Start">
+                                        <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextTitulo}" Text="{Binding NombreRedSocial}"/>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End">
+                                        <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextTitulo}" Text="{Binding NombreDeUsuario}"/>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                        <Label HorizontalOptions="Start" HorizontalTextAlignment="Start" Style="{StaticResource TextSubTitulo}" Text="{Binding URL}"/>
+                                    </StackLayout>
+
+                                </Grid>
+                            </Frame>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>
+        </Grid>
+        <!--</ScrollView>-->
     </ContentPage.Content>
 </ContentPage>

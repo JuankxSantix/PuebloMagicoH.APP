@@ -82,39 +82,7 @@ namespace PuebloMagicoH.Movil.GUI.Viws
                   RedesSociales= redSocials
                   
             };
-
-            //monumento = new Monumentos()
-            //{
-            //    Descripcion = txtdescriociono.Text,
-            //    Direccion = txtDireccion.Text,
-            //    NombreMonumentos = txtnombre.Text
-            //};
-            //hoteles = new Hoteles()
-            //{
-            //    Descripcion = txtdescriociono.Text,
-            //    Direccion = txtDireccion.Text,
-            //    HabitacionesDisponibles = int.Parse(txtHabitaciones.Text),
-            //    NombreHotel = txtnombre.Text
-            //};
-
-            //balnearios = new Balnearios()
-            //{
-            //    Descripcion = txtdescriociono.Text,
-            //    Direccion = txtDireccion.Text,
-            //    Nombre = txtnombre.Text
-            //};
-
-            //atractivosTuristicos = new AtractivosTuristicos()
-            //{
-            //    Descripcion = txtdescriociono.Text,
-            //    Direccion = txtDireccion.Text,
-            //    NombreAtractivo = txtnombre.Text
-            //};
-            //CategoriaEstablecimiento categoriaEstablecimiento = new CategoriaEstablecimiento()
-            //{
-            //    Nombre = txtnombre.Text
-            //};
-
+            
             if (manejadorDeComercios.AGREGAR(comercio))
                 DisplayAlert("Correcto", "SeAgrego correctamente", "ok");
             else

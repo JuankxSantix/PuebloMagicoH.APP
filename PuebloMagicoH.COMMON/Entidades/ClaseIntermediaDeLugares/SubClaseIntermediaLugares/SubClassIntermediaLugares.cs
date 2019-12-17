@@ -18,5 +18,10 @@ namespace PuebloMagicoH.COMMON.Entidades.ClaseIntermediaDeLugares.SubClaseInterm
         public string NombreRedSocial { get; set; }
         public string NombreDeUsuario { get; set; }
         public string URL { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} - {1} - {2}",NombreRedSocial,NombreDeUsuario,URL);
+        }
     }
 }
