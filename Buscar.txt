@@ -1,0 +1,2 @@
+Cargar una imagen en formato Byte[ ] en xamarin forms
+BitConverter

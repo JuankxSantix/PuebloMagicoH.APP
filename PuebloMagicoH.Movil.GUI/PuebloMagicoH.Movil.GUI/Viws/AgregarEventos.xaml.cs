@@ -1,4 +1,5 @@
 ﻿//using Android.Graphics;
+using Android.Graphics;
 using MongoDB.Bson;
 using MongoDB.Driver.GridFS;
 using Org.W3c.Dom;
@@ -18,15 +19,15 @@ using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using static Android.Provider.MediaStore.Images;
 
 namespace PuebloMagicoH.Movil.GUI.Viws
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AgregarEventos : ContentPage
 	{
-        //IManejadorDeEventos manejadorDeEventos;
-        IManejadorDeComercios manejadorDeComercios;
+        IManejadorDeEventos manejadorDeEventos;
+        //IManejadorDeComercios manejadorDeComercios;
         //IManejadorDeMonumentos manejadorDeMonumentos;
         //IManejadorDeHoteles manejadorDeHoteles;
         //IManejadorDeBalnearios manejadorDeBalnearios;
@@ -35,9 +36,11 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 
 
         //GridFSBucket contenerdor;
-        List<RedSocial> redSocials;
-        RedSocial RedSocial;
-        Comercio comercio;
+        //List<RedSocial> redSocials;
+        //RedSocial RedSocial;
+        //Comercio comercio;
+        byte[] foto=null;
+        Eventos eventos;
         //Monumentos monumento;
         //Hoteles hoteles;
         //Balnearios balnearios;
@@ -47,9 +50,9 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 			InitializeComponent ();
             manejadorDeCategoriaEstablecimientos = new ManejadorCategoriaEstablecimientos(new RepositorioGenerico<CategoriaEstablecimiento>());
             Categoria.ItemsSource = manejadorDeCategoriaEstablecimientos.Listar;
-            redSocials = new List<RedSocial>();
-            //manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
-            manejadorDeComercios = new ManejadorComercios(new RepositorioGenerico<Comercio>());
+            //redSocials = new List<RedSocial>();
+            manejadorDeEventos = new ManejadorEventos(new RepositorioGenerico<Eventos>());
+            //manejadorDeComercios = new ManejadorComercios(new RepositorioGenerico<Comercio>());
             //manejadorDeMonumentos = new ManejadorMonumentos(new RepositorioGenerico<Monumentos>());
             //manejadorDeHoteles = new ManejadorDeHoteles(new RepositorioGenerico<Hoteles>());
             //manejadorDeBalnearios = new ManejadorDeBalnearios(new RepositorioGenerico<Balnearios>());
@@ -58,32 +61,33 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 
         private void Agregar_Clicked(object sender, EventArgs e)
         {
-            //eventos = new Eventos()
-            //{
-            //    Descripcion = txtdescriociono.Text,
-            //    FechaInicio = DateInicio.Date,
-            //    FechaFin = DateFin.Date,
-            //    Horario = "",
-            //    Direccion = txtDireccion.Text,
-            //    Nombre = txtnombre.Text,
-            //    Costo = float.Parse(txtCosto.Text),
-
-            //};
-
-
-            comercio = new Comercio()
+            eventos = new Eventos()
             {
-                CategoriaEstablecimiento = Categoria.SelectedItem.ToString(),
                 Descripcion = txtdescriociono.Text,
-                Nombre = txtnombre.Text,
-                Telefono = txtTelefono.Text,
+                FechaInicio = DateInicio.Date,
+                FechaFin = DateFin.Date,
+                Horario = "",
                 Direccion = txtDireccion.Text,
-                 HorarioDeAtencion=txtHorarioDeAtencion.Text,
-                  RedesSociales= redSocials
-                  
+                Nombre = txtnombre.Text,
+                Costo = float.Parse("95.62"),
+                //Costo = float.Parse(txtCosto.Text),
+                 Fotografia=foto
             };
+
+
+            //comercio = new Comercio()
+            //{
+            //    CategoriaEstablecimiento = Categoria.SelectedItem.ToString(),
+            //    Descripcion = txtdescriociono.Text,
+            //    Nombre = txtnombre.Text,
+            //    Telefono = txtTelefono.Text,
+            //    Direccion = txtDireccion.Text,
+            //     HorarioDeAtencion=txtHorarioDeAtencion.Text,
+            //      RedesSociales= redSocials,
+            //      Fotografia=foto
+            //};
             
-            if (manejadorDeComercios.AGREGAR(comercio))
+            if (manejadorDeEventos.AGREGAR(eventos))
                 DisplayAlert("Correcto", "SeAgrego correctamente", "ok");
             else
                 DisplayAlert("Correcto", "No se agrego", "ok");
@@ -92,17 +96,18 @@ namespace PuebloMagicoH.Movil.GUI.Viws
 
         private void BtnSeleccionarUnaImagen_Clicked(object sender, EventArgs e)
         {
+            SoSe();
         }
 
         private void AgregarRed_Clicked(object sender, EventArgs e)
         {
-            RedSocial = new RedSocial()
-            {
-                NombreDeUsuario = txtnombre.Text,
-                NombreRedSocial = txtDireccion.Text,
-                URL = txtdescriociono.Text
-            };
-            redSocials.Add(RedSocial);
+            //RedSocial = new RedSocial()
+            //{
+            //    NombreDeUsuario = txtnombre.Text,
+            //    NombreRedSocial = txtDireccion.Text,
+            //    URL = txtdescriociono.Text
+            //};
+            //redSocials.Add(RedSocial);
         }
 
 
@@ -138,29 +143,38 @@ namespace PuebloMagicoH.Movil.GUI.Viws
         ////        return null;
         ////    }
         ////}
-        //private async void SoSe()
-        //{
+        private async void SoSe()
+        {
 
 
-        //    if (CrossMedia.Current.IsTakePhotoSupported)
-        //    {
-        //        var imagen = await CrossMedia.Current.PickPhotoAsync();
-        //        if (imagen != null)
-        //        {
-        //            MiImagen.Source = ImageSource.FromStream(() =>
-        //            {
-        //                var stream = imagen.GetStream();
-        //                imagen.Dispose();
-        //                return stream;
-        //            });
+            if (CrossMedia.Current.IsTakePhotoSupported)
+            {
+                var imagen = await CrossMedia.Current.PickPhotoAsync();
+                if (imagen != null)
+                {
+                    Stream stream=null;
+                    MiImagen.Source = ImageSource.FromStream(() =>
+                    {
+                        stream = imagen.GetStream();
+                        imagen.Dispose();
 
-        //        }
-        //        //foto = ImageToByte(MiImagen.Source);
-        //        var arreglo=File.ReadAllBytes(MiImagen.Source.ToString());
-        //        foto = arreglo;
-        //    //string x=System.Text.Encoding.UTF8.GetString(arreglo);
-        //        ID=manejadorDeEventos.Upload("EventoX", arreglo);
-        //    }
-        //}
+                        //var arreglo = File.ReadAllBytes(imagen.GetStream().ToString());
+
+
+                       //foto = File.ReadAllBytes(imagen.Path.ToString());
+                       // var bitma = BitmapFactory.DecodeStream(stream);
+                        return stream;
+                    });
+
+                        BinaryReader br = new BinaryReader(stream);
+                        //FileInfo fi=new FileInfo
+                        foto = new byte[stream.Length];
+
+                        stream.Read(foto, 0, Convert.ToInt32(stream.Length));
+
+                }
+                //foto = ImageToByte(MiImagen.Source);
+            }
+        }
     }
 }
